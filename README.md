@@ -1,17 +1,24 @@
-# レーベンリヴァーレ坂戸リッツ｜施工会社選定ヒアリング
+# レーベンリヴァーレ坂戸リッツ 大規模修繕工事
 
-GitHub Pagesで公開するHTMLプレゼンテーションです。
+施工会社選定ヒアリング用 HTML プレゼンテーションです。`index.html` をブラウザで開くか、GitHub Pages の公開ルートに配置してください。
+
+## 操作
+
+- `← / →`、`PageUp / PageDown`、スペース：前後のページ
+- `Home / End`：先頭・末尾
+- `一覧` または `O`：スライド一覧
+- `メモ` または `N`：プレゼンターノート
+- `全画面` または `F`：全画面表示
 
 ## 構成
 
-- `index.html`：GitHub Pagesの公開入口
-- `assets/`：プレゼン内で使用する画像
-- `.nojekyll`：GitHub Pagesで静的ファイルとして配信するための設定
+- 32ページ
+- 本編想定：37分10秒
+- 40分枠に対して2分50秒の質疑・進行バッファ
+- ページごとのプレゼンターノートは `index.html` 内に埋め込み
+- 参照資料・不一致・本番前確認事項は `SOURCES_AND_CHECKS.md` に整理
 
 ## 更新方法
 
-1. `index.html` または `assets/` 内のファイルを更新
-2. `main` ブランチへコミット
-3. 数十秒〜数分後にGitHub Pagesへ自動反映
+文章や時間を変更する場合は、各 `<section class="slide">` と、末尾の `notes` 配列を同じページ順で更新してください。画像は `assets/` の相対パスで参照しています。
 
-公開URL: https://pokpockin-rgb.github.io/leben-rivale-sakado-ritts/

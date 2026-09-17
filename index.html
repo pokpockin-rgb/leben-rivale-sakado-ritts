@@ -1,433 +1,109 @@
-<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>レーベンリヴァーレ坂戸リッツ｜施工会社選定ヒアリング v4</title><style>
-:root{
-  --paper:#f7f6f2; --ink:#16202b; --sub:#5f6874; --muted:#8a929d; --line:#d7dce2;
-  --blue:#005bac; --blue2:#008bd2; --navy:#0c2238; --white:#fff; --soft:#eeeff1;
-}
-*{box-sizing:border-box} html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#dfe3e8;font-family:"Noto Sans JP","Yu Gothic UI","Hiragino Kaku Gothic ProN",system-ui,sans-serif;color:var(--ink);user-select:none}
-#stage{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:#1b232c}
-#deck{position:relative;width:1600px;height:900px;overflow:hidden;background:var(--paper);box-shadow:0 24px 80px rgba(0,0,0,.28);transform-origin:center center}
-.slide{position:absolute;inset:0;background:var(--paper);opacity:0;pointer-events:none;transform:translateX(18px);transition:opacity .22s ease,transform .22s ease}.slide.active{opacity:1;pointer-events:auto;transform:none}
-.slide-inner{position:absolute;inset:0;padding:92px 92px 76px}.page-chrome{position:absolute;left:0;right:0;top:0;height:54px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 38px;color:#7c8590;font-size:13px;letter-spacing:.04em;z-index:5}.page-chrome span{font-weight:800;color:var(--blue);margin-right:14px}.page-chrome b{font-weight:700;color:#5b6570}.cover .page-chrome,.qa .page-chrome{display:none}
-h1,h2,h3,p{margin:0}.label{font-size:13px;line-height:1;letter-spacing:.18em;text-transform:uppercase;color:var(--blue);font-weight:800;margin-bottom:20px}h2{font-size:58px;line-height:1.14;letter-spacing:-.04em;font-weight:800}h2 strong{color:var(--blue)}p{font-size:22px;line-height:1.72;color:var(--sub);font-weight:500}.footnote{position:absolute;left:92px;right:92px;bottom:28px;font-size:13px;color:#7a838e}.bottom-message{position:absolute;left:92px;right:92px;bottom:70px;border-top:1px solid var(--line);padding-top:18px;font-size:24px;font-weight:800;color:var(--ink)}.bottom-message.small{font-size:18px;color:var(--sub);font-weight:700}.action-title{max-width:1020px}.action-title.wide{max-width:1220px}.action-title p{margin-top:18px;max-width:880px}.two-col{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;height:100%}.copy-block{max-width:690px}.copy-block p{margin-top:24px}.copy-block.slim{max-width:540px}.visual-dominant{grid-template-columns:58% 42%;gap:54px}.emphasis-left{grid-template-columns:47% 53%}.photo-right{grid-template-columns:45% 55%}.large-visual,.plan-photo,.pane-img,.cover-photo,.photo-grid-report div,.vertical-photos div{background-size:cover;background-position:center;border:1px solid var(--line);background-color:#ddd}.tag-list{display:flex;flex-wrap:wrap;gap:10px;margin-top:34px}.tag-list span{border:1px solid var(--line);background:#fff;padding:11px 15px;border-radius:99px;font-size:15px;color:#3d4854;font-weight:700}
-.cover-layout{display:grid;grid-template-columns:54% 46%;height:100%;background:#0d2237}.cover-photo{height:100%;border:none;filter:saturate(.92);position:relative}.cover-photo:after{content:"";position:absolute;inset:0;background:rgba(12,34,56,.1)}.cover-copy{height:100%;display:flex;flex-direction:column;justify-content:center;padding:80px 90px;color:white;background:#0d2237}.cover-copy h1{font-size:78px;line-height:1.05;letter-spacing:-.055em;font-weight:850}.cover-copy p{font-size:30px;color:#dbe5ef;margin-top:30px}.cover-meta{display:flex;align-items:center;gap:18px;margin-top:90px;color:#c8d4df;font-size:18px}.cover-meta img{width:150px;background:white;padding:12px;border-radius:2px}
-.metric-visual{position:relative;height:640px}.plan-photo{position:absolute;inset:0;background-position:center;border-radius:0}.metric-box{position:absolute;right:0;bottom:0;width:360px;height:250px;background:var(--blue);color:#fff;padding:28px 34px;display:grid;grid-template-columns:auto 1fr auto;grid-template-rows:1fr auto;align-items:end}.metric-box span{font-size:25px;font-weight:700;padding-bottom:24px}.metric-box b{font-size:142px;line-height:.82;letter-spacing:-.08em}.metric-box em{font-style:normal;font-size:38px;font-weight:800;padding-bottom:18px}.metric-box small{grid-column:1/4;border-top:1px solid rgba(255,255,255,.35);padding-top:14px;font-size:17px;font-weight:700;letter-spacing:.04em}.compare-flat{display:grid;grid-template-columns:1fr 82px 1fr;gap:18px;margin-top:54px;align-items:center}.compare-pane{background:#fff;border:1px solid var(--line);padding:0}.compare-pane.accent{border-top:8px solid var(--blue)}.compare-pane:not(.accent){border-top:8px solid #aeb5bd}.pane-head{height:76px;display:flex;align-items:center;justify-content:space-between;padding:0 26px;border-bottom:1px solid var(--line)}.pane-head span{font-size:17px;color:var(--sub);font-weight:800}.pane-head b{font-size:25px;color:var(--ink)}.accent .pane-head b{color:var(--blue)}.pane-img{height:330px;border:0}.compare-pane p{font-size:18px;padding:20px 26px 26px;line-height:1.55}.arrow-block{font-size:58px;color:var(--blue);font-weight:800;text-align:center}.three-flat{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);margin-top:64px;border:1px solid var(--line)}.three-flat div{background:#fff;padding:42px;min-height:360px}.three-flat span{display:block;color:var(--blue);font-size:18px;font-weight:900;margin-bottom:34px}.three-flat h3{font-size:36px;line-height:1.23;letter-spacing:-.03em}.three-flat p{font-size:18px;margin-top:26px}.plan-crop{height:612px;background-position:center;border:1px solid var(--line)}.timeline-flat{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin-top:76px;border:1px solid var(--line);background:#fff}.timeline-flat div{padding:34px 26px;border-right:1px solid var(--line);min-height:280px}.timeline-flat div:last-child{border-right:0}.timeline-flat span{display:block;color:var(--blue);font-size:14px;font-weight:900;letter-spacing:.08em;margin-bottom:24px}.timeline-flat b{font-size:26px}.timeline-flat p{font-size:17px;margin-top:16px;line-height:1.55}.process-line{display:grid;grid-template-columns:repeat(6,1fr);gap:0;margin-top:86px;border-top:4px solid var(--blue)}.process-line div{position:relative;padding:34px 20px 0;border-left:1px solid var(--line);min-height:260px}.process-line div:last-child{border-right:1px solid var(--line)}.process-line div:before{content:"";position:absolute;top:-13px;left:20px;width:22px;height:22px;background:var(--paper);border:5px solid var(--blue);border-radius:50%}.process-line span{display:block;color:var(--blue);font-weight:900;font-size:16px;margin-bottom:20px}.process-line b{font-size:23px;line-height:1.35}.option-table{margin-top:50px;border:1px solid var(--line);background:#fff}.opt-row{display:grid;grid-template-columns:18% 41% 41%;border-bottom:1px solid var(--line);min-height:82px}.opt-row:last-child{border-bottom:0}.opt-row>div{padding:20px 26px;border-right:1px solid var(--line);font-size:20px;color:var(--sub);display:flex;align-items:center}.opt-row>div:last-child{border-right:0}.opt-row>div:first-child{font-weight:900;color:var(--ink);background:#f0f1f2}.opt-row.head>div{background:#0d2237;color:#fff;font-size:23px;font-weight:800}.opt-row.duration b{font-size:44px;color:var(--blue);margin-right:18px}.opt-row.duration span{font-size:17px}.photo-report{display:grid;grid-template-columns:39% 61%;gap:48px;height:100%;align-items:center}.report-copy p{margin-top:24px}.photo-grid-report{height:660px;display:grid;grid-template-columns:1.2fr .8fr;grid-template-rows:1fr 1fr;gap:14px}.photo-grid-report div{position:relative;background-color:#ddd}.photo-grid-report .photo-large{grid-row:1/3}.photo-grid-report span{position:absolute;left:18px;bottom:18px;background:rgba(12,34,56,.86);color:#fff;padding:9px 12px;font-size:15px;font-weight:800}.five-steps{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin-top:70px;border:1px solid var(--line);background:#fff}.five-steps div{min-height:300px;border-right:1px solid var(--line);padding:32px 24px}.five-steps div:last-child{border-right:0}.five-steps span{display:block;color:var(--blue);font-size:16px;font-weight:900;margin-bottom:34px}.five-steps b{font-size:26px;line-height:1.3}.five-steps p{font-size:17px;line-height:1.55;margin-top:18px}.vertical-photos{height:660px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.vertical-photos div{background-position:center}.compact-flow{display:flex;flex-wrap:wrap;gap:10px;margin-top:40px}.compact-flow span{background:#fff;border:1px solid var(--line);padding:12px 15px;font-weight:800;font-size:15px}.quality-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:56px}.quality-grid div{background:#fff;padding:30px;min-height:190px}.quality-grid b{font-size:26px}.quality-grid p{font-size:17px;margin-top:18px;line-height:1.55}.inspect-line{position:absolute;left:92px;right:92px;bottom:74px;display:grid;grid-template-columns:repeat(7,1fr);border-top:4px solid var(--blue)}.inspect-line span{padding-top:20px;font-weight:800;font-size:16px;color:var(--sub);border-left:1px solid var(--line);padding-left:12px}.safety-box{background:#fff;border:1px solid var(--line);padding:38px}.risk-title{font-size:18px;color:var(--blue);font-weight:900;margin-bottom:18px}.risk-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.risk-grid span{border:1px solid var(--line);padding:16px;font-size:22px;font-weight:800;background:#f9fafb}.dual{display:grid;grid-template-columns:1fr 1fr;gap:20px;border-top:1px solid var(--line);margin-top:34px;padding-top:30px}.dual b{font-size:24px}.dual p{font-size:16px;margin-top:12px}.manager-flat{display:grid;grid-template-columns:37% 63%;height:100%;gap:54px;align-items:center}.portrait-flat{height:660px;border:1px solid var(--line);background:#e9ecef;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#8a929d}.portrait-flat span{font-size:64px;font-weight:900;letter-spacing:.12em}.portrait-flat small{font-size:18px;margin-top:16px}.manager-info h2{font-size:76px}.role{font-size:23px;color:var(--sub);margin-top:10px}.experience{display:flex;align-items:end;margin:40px 0}.experience b{font-size:142px;line-height:.82;color:var(--blue);letter-spacing:-.08em}.experience span{font-size:22px;font-weight:900;color:var(--ink);line-height:1.05;margin-left:18px;text-transform:uppercase}.record-flat{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);max-width:720px}.record-flat div{background:#fff;padding:24px}.record-flat b{font-size:34px}.record-flat span{display:block;margin-top:8px;color:var(--sub);font-size:21px}.team-table{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:64px}.team-table div{background:#fff;padding:32px;min-height:166px}.team-table .center-cell{grid-row:1/3;background:#0d2237;color:#fff;display:flex;flex-direction:column;justify-content:center}.center-cell span{font-size:18px;color:#bbcad8}.center-cell b{font-size:38px;margin-top:10px}.team-table b{font-size:25px}.team-table p{font-size:17px;margin-top:14px}.after-line{display:grid;grid-template-columns:repeat(8,1fr);gap:0;margin-top:54px;border-top:4px solid var(--blue)}.after-line span{padding:26px 12px 0;min-height:138px;font-weight:800;font-size:18px;border-left:1px solid var(--line);color:var(--sub)}.after-line span:last-child{border-right:1px solid var(--line)}.warranty-flat{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:42px}.warranty-flat div{background:#fff;padding:28px}.warranty-flat b{font-size:44px;color:var(--blue)}.warranty-flat span{display:block;margin-top:8px;font-weight:800;color:var(--sub)}.foundation{grid-template-columns:47% 53%}.big-year{font-size:142px;line-height:.8;color:var(--blue);font-weight:900;letter-spacing:-.09em;margin-bottom:36px}.small-logo{margin-top:54px;width:210px;background:white;border:1px solid var(--line);padding:16px}.business-list{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line)}.business-list div{background:#fff;padding:38px;min-height:270px}.business-list span{color:var(--blue);font-weight:900}.business-list b{display:block;font-size:32px;line-height:1.25;margin-top:26px}.business-list p{font-size:18px;margin-top:16px}.closing{height:100%;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;max-width:1120px;margin:auto}.closing h2{font-size:70px}.closing-list{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);width:100%;margin:52px 0 42px}.closing-list div{background:#fff;padding:34px}.closing-list span{display:block;color:var(--blue);font-weight:900;margin-bottom:18px}.closing-list b{font-size:25px}.closing p{font-size:31px;line-height:1.55}.closing strong{color:var(--ink)}.qa-flat{height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:#0d2237;color:#fff;margin:-92px}.qa-flat .label{color:#9fc4df}.qa-flat h1{font-size:116px;letter-spacing:-.06em}.qa-flat p{font-size:30px;line-height:1.6;color:#d7e2eb;margin-top:22px}.qa-flat img{width:180px;background:#fff;padding:14px;margin-top:58px}.controls{position:fixed;left:50%;bottom:22px;transform:translateX(-50%);display:flex;gap:8px;align-items:center;background:rgba(255,255,255,.92);border:1px solid rgba(0,0,0,.1);border-radius:999px;padding:8px 12px;box-shadow:0 10px 36px rgba(0,0,0,.18);z-index:50}.controls button{border:0;background:#f0f2f5;border-radius:999px;padding:9px 13px;font-weight:800;color:#24303c;cursor:pointer}.controls button:hover{background:#dce5ef}.progress{position:fixed;left:0;bottom:0;height:4px;background:var(--blue);z-index:51;transition:width .2s}.counter{font-size:13px;color:#59636e;font-weight:800;padding:0 8px}.timer{font-variant-numeric:tabular-nums;color:#59636e;font-size:13px;font-weight:900;padding:0 8px}.overview{position:fixed;inset:0;background:rgba(15,23,31,.92);z-index:80;display:none;overflow:auto;padding:48px}.overview.open{display:block}.thumb-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;max-width:1280px;margin:0 auto}.thumb{background:#fff;border-radius:4px;padding:16px;min-height:118px;cursor:pointer}.thumb b{display:block;color:var(--blue);font-size:14px}.thumb span{display:block;font-size:20px;font-weight:900;margin-top:12px;color:#17212c}.notes{position:fixed;right:22px;top:22px;width:420px;max-height:80vh;overflow:auto;background:rgba(255,255,255,.96);border:1px solid rgba(0,0,0,.12);box-shadow:0 16px 50px rgba(0,0,0,.18);padding:22px;z-index:60;display:none}.notes.open{display:block}.notes h3{font-size:16px;color:var(--blue);margin-bottom:10px}.notes p{font-size:16px;line-height:1.65;color:#2c3540}@media(max-width:900px){.controls{bottom:10px}.thumb-grid{grid-template-columns:1fr 1fr}}
-
-/* v3: persistent slide navigator + calmer presentation chrome */
-.page-chrome{display:none!important}
-#deck{background:#f7f6f2}
-.slide-inner{padding:144px 88px 64px}
-.cover .slide-inner,.qa .slide-inner{padding:110px 0 0}
-.cover-layout{height:100%}
-.qa-flat{margin:0;height:100%}
-
-.deck-chrome{position:absolute;left:0;right:0;top:0;height:110px;background:#0b0f14;color:#fff;z-index:70;border-bottom:1px solid #222932;box-shadow:0 3px 14px rgba(0,0,0,.14)}
-.deck-nav{height:74px;display:grid;grid-template-columns:repeat(19,minmax(0,1fr));gap:0;padding:8px 14px 0;align-items:stretch}
-.nav-item{appearance:none;border:0;background:transparent;color:#69727d;min-width:0;padding:6px 5px 8px;position:relative;cursor:pointer;font-family:inherit;transition:background .15s ease,color .15s ease,border-color .15s ease}
-.nav-item::after{content:"";position:absolute;left:9px;right:9px;bottom:0;height:2px;background:#2a3139;transition:background .15s ease}
-.nav-item.completed::after{background:#3f8fd2}
-.nav-item.active{color:#f4f8fb;background:#10233a;border:1px solid #438ee0;border-radius:7px;padding-top:5px}
-.nav-item.active::after{left:10px;right:10px;background:#76b6ff}
-.nav-num{display:block;font-size:14px;font-weight:900;line-height:1;font-variant-numeric:tabular-nums;letter-spacing:.02em}
-.nav-label{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin-top:5px;font-size:10.5px;font-weight:750;line-height:1.18;letter-spacing:-.01em;word-break:keep-all}
-.nav-item:hover{color:#d5dbe2;background:#111720}
-.nav-item.active:hover{background:#10233a}
-
-.deck-status{height:36px;border-top:1px solid #171d24;display:flex;align-items:center;justify-content:space-between;padding:0 24px;font-size:12px;color:#77818c;font-variant-numeric:tabular-nums}
-.status-left,.status-right{display:flex;align-items:center;gap:12px;min-width:0}
-.status-count{display:inline-flex;align-items:center;height:24px;padding:0 10px;border:1px solid #315f91;background:#10233a;border-radius:6px;color:#e9f4ff;font-size:14px;font-weight:900;letter-spacing:.02em}
-.status-title{color:#9ca6b1;font-weight:750;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:430px}
-.status-section{color:#59636d;font-weight:700;white-space:nowrap}
-.status-sep{width:1px;height:14px;background:#29313a}
-.status-label{color:#59636d}
-.status-value{color:#aeb8c2;font-weight:850;min-width:48px;text-align:right}
-.chrome-btn{appearance:none;border:0;background:transparent;color:#7e8994;padding:4px 7px;border-radius:4px;font-family:inherit;font-size:11px;font-weight:800;cursor:pointer}
-.chrome-btn:hover{background:#161d25;color:#dbe4ed}
-
-.controls{display:none!important}
-.progress{position:absolute;left:0;top:108px;bottom:auto;height:2px;background:#4d9be2;z-index:71;opacity:.95}
-.notes{top:126px;right:18px;border-radius:6px}
-.overview{padding-top:132px;background:rgba(7,11,16,.96)}
-.thumb-grid{max-width:1360px;grid-template-columns:repeat(5,1fr);gap:12px}
-.thumb{border-radius:6px;border:1px solid #dce1e6;min-height:100px;box-shadow:none}
-.thumb:hover{border-color:#579ce0}
-
-/* typography and spacing refinements */
-.label{font-size:12px;letter-spacing:.15em;margin-bottom:17px}
-h2{font-size:54px;line-height:1.13}
-p{font-size:21px;line-height:1.67}
-.action-title p{margin-top:15px}
-.bottom-message{left:88px;right:88px;bottom:42px;padding-top:15px;font-size:22px}
-.footnote{left:88px;right:88px;bottom:22px}
-.three-flat,.timeline-flat,.option-table,.quality-grid,.team-table,.business-list,.closing-list,.warranty-flat,.record-flat{border-color:#cfd5db}
-.compare-pane,.safety-box,.portrait-flat{border-color:#cfd5db}
-.tag-list span,.compact-flow span{border-color:#cfd5db}
-
-@media(max-width:900px){
-  .deck-nav{padding-left:8px;padding-right:8px}.nav-label{font-size:9px}.nav-num{font-size:12px}
-  .status-section{display:none}.thumb-grid{grid-template-columns:1fr 1fr}
-}
-
-/* v4: all presentation navigation moved to the bottom */
-.slide-inner{padding:70px 88px 162px}
-.cover .slide-inner,.qa .slide-inner{padding:0 0 110px}
-.cover-layout,.qa-flat{height:100%}
-
-.deck-chrome{top:auto!important;bottom:0;height:110px;border-bottom:0;border-top:1px solid #222932;box-shadow:0 -3px 14px rgba(0,0,0,.14)}
-.deck-nav{height:74px;padding:8px 14px 0}
-.deck-status{height:36px}
-.progress{top:auto!important;bottom:108px!important;height:2px}
-
-/* keep slide-level captions clear of the persistent bottom UI */
-.bottom-message{bottom:148px}
-.footnote{bottom:126px}
-
-/* controls live in the status row */
-.status-right{gap:8px}
-.chrome-btn{height:26px;display:inline-flex;align-items:center;justify-content:center;white-space:nowrap}
-.chrome-btn.utility{color:#87929e}
-.chrome-btn.step{min-width:74px;border:1px solid #34404c;background:#141b23;color:#cbd5df;font-size:12px;padding:4px 11px}
-.chrome-btn.step:hover{border-color:#528bc5;background:#172536;color:#fff}
-.chrome-btn.step.next{border-color:#346fa8;background:#123155;color:#eef7ff}
-.chrome-btn.step.next:hover{background:#174372;border-color:#5ba5e8}
-.chrome-btn:disabled{opacity:.28;cursor:default;background:transparent!important;border-color:#2b333c!important;color:#68727c!important}
-
-.notes{top:22px;right:18px;max-height:calc(100% - 154px)}
-.overview{padding:48px 48px 132px;background:rgba(7,11,16,.96)}
-
-@media(max-width:900px){
-  .slide-inner{padding-bottom:162px}
-  .status-title,.status-label,.status-value,.status-sep{display:none}
-  .chrome-btn.step{min-width:58px}
-}
-</style></head><body><div id="stage"><main id="deck"><div class="deck-chrome"><nav class="deck-nav"></nav><div class="deck-status"><div class="status-left"><span class="status-count"></span><span class="status-title"></span><span class="status-sep"></span><span class="status-section"></span></div><div class="status-right"><span class="status-label">このスライド残り</span><span class="status-value slide-remaining"></span><span class="status-sep"></span><span class="status-label">経過 / 想定</span><span class="status-value total-elapsed"></span><button class="chrome-btn step prev" data-prev aria-label="前のスライド">‹ 前へ</button><button class="chrome-btn utility" data-overview>一覧</button><button class="chrome-btn utility" data-notes>メモ</button><button class="chrome-btn utility" data-full>全画面</button><button class="chrome-btn step next" data-next aria-label="次のスライド">次へ ›</button></div></div></div><section class="slide cover" data-title="表紙" data-section="INTRODUCTION" data-duration="0:30" data-notes="建物名と工事名だけを確認し、会社紹介には入らず北側車路へ。">
-      <div class="page-chrome"><div><span>01</span><b>INTRODUCTION</b></div><div>施工会社選定ヒアリング</div></div>
-      <div class="slide-inner">
-<div class="cover-layout">
-  <div class="cover-photo" style="background-image:url('assets/image-01.jpg')"></div>
-  <div class="cover-copy">
-    <div class="label">施工会社選定ヒアリング</div>
-    <h1>レーベンリヴァーレ<br>坂戸リッツ</h1>
-    <p>大規模修繕工事</p>
-    <div class="cover-meta"><img src="assets/image-02.png" alt="NAKAMURA"><span>株式会社NAKAMURA</span></div>
-  </div>
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>レーベンリヴァーレ坂戸リッツ｜施工会社選定ヒアリング</title>
+<style>
+:root{--navy:#0b2038;--navy2:#123453;--blue:#0085ce;--cyan:#47b8e8;--paper:#f3f5f6;--white:#fff;--ink:#162433;--muted:#5c6975;--line:#cdd5db;--soft:#e8eef2;--orange:#efb84d;--stage-w:177.7778vh;--stage-h:56.25vw}
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#dfe5e8;color:var(--ink);font-family:Inter,"Noto Sans JP","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;-webkit-font-smoothing:antialiased}button{font:inherit}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;background:radial-gradient(circle at 18% 16%,rgba(255,255,255,.78),transparent 36%),linear-gradient(115deg,rgba(11,32,56,.04),transparent 45%,rgba(0,133,206,.04));z-index:0}
+#stage{position:relative;width:var(--stage-w);height:var(--stage-h);max-width:100vw;max-height:100vh;aspect-ratio:16/9;margin:auto;top:50%;transform:translateY(-50%);overflow:hidden;background:var(--paper);box-shadow:0 18px 70px rgba(10,30,45,.24)}
+.slide{position:absolute;inset:0;display:none;padding:72px 84px 86px;background:var(--paper);overflow:hidden}.slide.active{display:block}.slide:after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.28;background:repeating-linear-gradient(115deg,rgba(20,36,51,.022) 0,rgba(20,36,51,.022) 1px,transparent 1px,transparent 13px)}
+.slide>*{position:relative;z-index:1}.slide.chapter{background:var(--navy);color:#fff;padding:0;display:none}.slide.chapter.active{display:flex;align-items:center;justify-content:center}.chapter .chapter-no{position:absolute;top:64px;left:84px;color:#8ebbd2;letter-spacing:.16em;font-size:15px;font-weight:800}.chapter .chapter-copy{text-align:center;z-index:2}.chapter .en{font-size:58px;letter-spacing:-.045em;font-weight:800;line-height:1.02}.chapter .ja{font-size:23px;letter-spacing:.16em;margin-top:24px;color:#d9e7ed}.chapter .rule{width:92px;height:3px;background:var(--blue);margin:30px auto 0}.chapter .orb{position:absolute;border-radius:50%;filter:blur(.2px);opacity:.34}.chapter .orb.one{width:290px;height:88px;left:15%;bottom:17%;background:linear-gradient(90deg,#87a4b6,transparent);transform:rotate(12deg)}.chapter .orb.two{width:360px;height:75px;right:12%;bottom:23%;background:linear-gradient(90deg,transparent,#0085ce);transform:rotate(-12deg)}.chapter .orb.three{width:84px;height:84px;left:27%;bottom:22%;background:#98aabb}
+.eyebrow{font-size:15px;letter-spacing:.14em;text-transform:uppercase;font-weight:800;color:var(--blue);margin-bottom:17px}.chapter-label{font-size:13px;letter-spacing:.14em;color:var(--muted);font-weight:800}.title{font-size:46px;letter-spacing:-.045em;line-height:1.12;margin:0;max-width:920px}.title strong{color:var(--blue)}.lead{font-size:22px;line-height:1.55;color:var(--muted);margin:22px 0 0;max-width:900px}.tiny{font-size:13px;color:var(--muted);line-height:1.55}.rule{height:1px;background:var(--line);margin:28px 0}.grid{display:grid;gap:22px}.two{grid-template-columns:1fr 1fr}.three{grid-template-columns:repeat(3,1fr)}.four{grid-template-columns:repeat(4,1fr)}.panel{background:rgba(255,255,255,.92);border:1px solid var(--line);padding:26px 28px}.panel.blue{background:var(--navy);color:#fff;border-color:var(--navy)}.panel h3{font-size:22px;line-height:1.25;margin:0 0 12px}.panel p{font-size:16px;line-height:1.55;margin:0;color:var(--muted)}.panel.blue p{color:#d9e6ed}.label{font-size:13px;font-weight:900;letter-spacing:.1em;color:var(--blue);text-transform:uppercase}.number{font-size:74px;font-weight:850;letter-spacing:-.08em;line-height:.9;color:var(--blue)}.unit{font-size:18px;font-weight:800;margin-left:8px;color:var(--ink)}.note-chip{display:inline-flex;align-items:center;padding:9px 14px;background:#e7f3f8;color:#076997;border:1px solid #b6dceb;border-radius:999px;font-size:14px;font-weight:800}.photo{width:100%;height:100%;object-fit:cover;display:block}.photo-panel{position:relative;min-height:240px;overflow:hidden;background:#d9e0e4}.photo-panel img{width:100%;height:100%;object-fit:cover}.photo-caption{position:absolute;left:16px;bottom:14px;padding:7px 10px;background:rgba(11,32,56,.86);color:#fff;font-size:13px;font-weight:800;letter-spacing:.03em}.quote{font-size:35px;line-height:1.35;letter-spacing:-.03em;font-weight:800;max-width:890px}.quote em{font-style:normal;color:var(--blue)}.bottom-kicker{position:absolute;left:84px;bottom:30px;z-index:2;font-size:13px;color:var(--muted);letter-spacing:.05em}.page-mark{position:absolute;right:84px;top:31px;color:#778692;font-size:12px;letter-spacing:.08em;z-index:2}.hero-cover{padding:0;background:#061c34;color:#fff}.hero-cover:after{opacity:.12}.hero-cover .cover-photo{position:absolute;inset:0;background:url('assets/cover-sakado.png') center/cover no-repeat;filter:saturate(.98)}.hero-cover .cover-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(3,25,53,.94) 0%,rgba(3,25,53,.68) 35%,rgba(3,25,53,.06) 74%)}.cover-copy{position:absolute;left:84px;top:92px;max-width:870px}.cover-copy .eyebrow{color:#67c7f2;background:rgba(0,133,206,.8);display:inline-block;padding:9px 17px;margin:0 0 34px}.cover-copy h1{font-size:62px;line-height:1.12;letter-spacing:-.06em;margin:0}.cover-copy h1 span{display:block;font-size:42px;font-weight:500;letter-spacing:.04em;margin-top:15px}.cover-copy .sub{font-size:17px;color:#d5e7f0;margin-top:34px;letter-spacing:.08em}.cover-brand{position:absolute;left:84px;bottom:54px;display:flex;align-items:center;gap:18px}.cover-brand img{width:210px;height:auto;filter:brightness(0) invert(1)}.cover-brand small{font-size:13px;color:#c8dbe6;letter-spacing:.1em}.fact-board{display:grid;grid-template-columns:1.15fr .85fr;gap:22px;margin-top:30px;height:500px}.fact-board .photo-panel{height:500px}.fact-side{display:grid;grid-template-columns:1fr 1fr;gap:12px}.fact{background:#fff;border:1px solid var(--line);padding:20px 18px;display:flex;flex-direction:column;justify-content:space-between}.fact b{font-size:17px;line-height:1.25}.fact .number{font-size:58px}.promise-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:50px}.promise{background:#fff;min-height:260px;padding:32px 28px}.promise .no{font-size:14px;color:var(--blue);font-weight:900;letter-spacing:.13em}.promise h3{font-size:31px;line-height:1.12;margin:28px 0 16px;letter-spacing:-.04em}.promise p{font-size:16px;line-height:1.55;color:var(--muted);margin:0}.promise strong{color:var(--ink)}.steps{display:grid;grid-template-columns:repeat(5,1fr);border-top:4px solid var(--blue);margin-top:56px}.step{min-height:190px;padding:26px 18px;border-left:1px solid var(--line);position:relative}.step:last-child{border-right:1px solid var(--line)}.step:before{content:"";position:absolute;top:-14px;left:17px;width:19px;height:19px;border-radius:50%;border:5px solid var(--blue);background:var(--paper)}.step .label{margin-bottom:17px}.step b{display:block;font-size:22px;line-height:1.3}.step p{font-size:14px;line-height:1.5;color:var(--muted);margin:12px 0 0}.plan-wrap{display:grid;grid-template-columns:1.38fr .62fr;gap:26px;margin-top:22px;height:505px}.plan-img{height:505px;border:1px solid var(--line);background:#fff;padding:12px}.plan-img img{width:100%;height:100%;object-fit:contain}.route-legend{display:grid;gap:10px;align-content:start}.legend-item{display:grid;grid-template-columns:18px 1fr;gap:12px;align-items:start;background:#fff;border:1px solid var(--line);padding:14px}.legend-dot{width:18px;height:18px;margin-top:2px;border-radius:50%;background:var(--blue)}.legend-item:nth-child(2) .legend-dot{background:#39a36b}.legend-item:nth-child(3) .legend-dot{background:#e3a935}.legend-item:nth-child(4) .legend-dot{background:#9465c8}.legend-item b{font-size:15px}.legend-item p{font-size:13px;color:var(--muted);line-height:1.4;margin:4px 0 0}.metric-page{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:30px;height:490px}.metric-block{background:var(--navy);color:#fff;padding:45px 48px;position:relative;overflow:hidden}.metric-block:after{content:"";position:absolute;right:-80px;bottom:-100px;width:330px;height:240px;border:35px solid rgba(0,133,206,.65);border-radius:50%;transform:rotate(-20deg)}.metric-block .label{color:#9fd8ed}.metric-block .number{font-size:168px;color:#fff;margin-top:62px}.metric-block .unit{color:#fff;font-size:32px}.metric-block p{position:absolute;left:48px;bottom:42px;font-size:17px;color:#d6e4eb}.metric-photo{height:490px;display:grid;grid-template-rows:1fr 1fr;gap:14px}.metric-photo .photo-panel{min-height:0}.compare{display:grid;grid-template-columns:1fr 74px 1fr;gap:18px;align-items:center;margin-top:48px}.compare-pane{background:#fff;border:1px solid var(--line);min-height:330px}.compare-pane .head{height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 22px;border-bottom:1px solid var(--line)}.compare-pane .head b{font-size:21px}.compare-pane .head span{font-size:13px;color:var(--muted);font-weight:800;letter-spacing:.08em}.compare-pane.normal{border-top:7px solid #9ba5ae}.compare-pane.proposed{border-top:7px solid var(--blue)}.compare-pane ul{margin:0;padding:24px 34px 24px 48px}.compare-pane li{font-size:18px;line-height:1.45;margin:10px 0}.compare-arrow{font-size:44px;text-align:center;color:var(--blue);font-weight:900}.checks{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:58px}.check{background:#fff;padding:30px 25px;min-height:190px}.check .label{margin-bottom:18px}.check b{display:block;font-size:24px}.check p{font-size:15px;line-height:1.5;color:var(--muted);margin:12px 0 0}.info-rhythm{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:34px}.rhythm{background:#fff;border:1px solid var(--line);padding:28px}.rhythm h3{margin:0 0 20px;font-size:23px}.rhythm .line{display:flex;gap:11px;align-items:flex-start;margin:15px 0}.rhythm .line span{flex:0 0 90px;color:var(--blue);font-size:13px;font-weight:900;letter-spacing:.08em}.rhythm .line b{font-size:17px}.resident-flow{display:flex;gap:0;border-top:3px solid var(--blue);margin-top:30px}.resident-flow div{flex:1;min-height:110px;border-left:1px solid var(--line);padding:18px 12px}.resident-flow div:last-child{border-right:1px solid var(--line)}.resident-flow b{font-size:17px;line-height:1.3;display:block}.resident-flow span{display:block;font-size:13px;color:var(--muted);margin-top:10px;line-height:1.4}.gate-map{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:55px}.gate{background:#fff;border:1px solid var(--line);padding:22px 18px;min-height:235px;position:relative}.gate:after{content:"→";position:absolute;right:-17px;top:91px;color:var(--blue);font-size:28px;font-weight:900}.gate:last-child:after{display:none}.gate .gate-no{font-size:13px;font-weight:900;color:var(--blue);letter-spacing:.12em}.gate h3{font-size:21px;line-height:1.25;margin:25px 0 12px}.gate p{font-size:14px;color:var(--muted);line-height:1.45;margin:0}.gate-stop{margin-top:22px;display:inline-block;padding:7px 10px;color:var(--blue);border:1px solid #9ecbe0;font-size:12px;font-weight:900}.schedule-map{margin-top:42px;background:#fff;border:1px solid var(--line);padding:22px}.schedule-row{display:grid;grid-template-columns:180px 1fr 1fr;align-items:center;border-bottom:1px solid var(--line);min-height:62px}.schedule-row:last-child{border-bottom:0}.schedule-row>div{padding:12px 14px;border-left:1px solid var(--line)}.schedule-row>div:first-child{border-left:0;background:#f0f3f5;font-weight:900}.schedule-row.head>div{background:var(--navy);color:#fff;font-size:15px}.schedule-row b{font-size:17px}.schedule-row span{font-size:13px;color:var(--muted)}.schedule-row.head span{color:#d5e6ee}.technical{display:grid;grid-template-columns:1.05fr .95fr;gap:28px;margin-top:32px;height:515px}.tech-copy{display:flex;flex-direction:column;justify-content:center}.tech-copy .quote{font-size:39px}.photo-triptych{display:grid;grid-template-columns:1.2fr .8fr;grid-template-rows:1fr 1fr;gap:12px;height:515px}.photo-triptych .photo-panel:first-child{grid-row:1/3}.tile-flow{display:grid;grid-template-columns:repeat(9,1fr);gap:0;border-top:4px solid var(--blue);margin-top:58px}.tile-flow .tf{min-height:175px;padding:24px 11px;border-left:1px solid var(--line);position:relative}.tile-flow .tf:last-child{border-right:1px solid var(--line)}.tile-flow .tf:before{content:"";position:absolute;top:-14px;left:13px;width:19px;height:19px;border:5px solid var(--blue);border-radius:50%;background:var(--paper)}.tile-flow b{font-size:16px;line-height:1.35;display:block}.tile-flow span{font-size:12px;color:var(--muted);line-height:1.35;display:block;margin-top:12px}.tech-note{margin-top:22px;padding:16px 18px;background:#e7f4f9;border-left:4px solid var(--blue);font-size:15px;line-height:1.5;color:#155b79}.soffit-layout{display:grid;grid-template-columns:1fr 1.05fr;gap:26px;margin-top:30px;height:500px}.soffit-photo-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.soffit-photo-grid .photo-panel:first-child{grid-column:1/3}.soffit-copy{background:#fff;border:1px solid var(--line);padding:30px}.soffit-copy h3{font-size:28px;margin:0 0 18px}.soffit-copy p{font-size:17px;color:var(--muted);line-height:1.55;margin:0}.soffit-list{margin:22px 0 0;padding:0;list-style:none;display:grid;gap:10px}.soffit-list li{display:flex;gap:10px;align-items:flex-start;font-size:16px;font-weight:800}.soffit-list li:before{content:"01";color:var(--blue);font-size:12px;font-weight:900;margin-top:3px}.soffit-list li:nth-child(2):before{content:"02"}.soffit-list li:nth-child(3):before{content:"03"}.soffit-list li:nth-child(4):before{content:"04"}.soffit-list li:nth-child(5):before{content:"05"}.soffit-flow{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:46px}.soffit-flow .sf{background:#fff;border:1px solid var(--line);padding:22px 17px;min-height:150px}.sf b{font-size:18px;line-height:1.35;display:block}.sf span{font-size:13px;color:var(--muted);line-height:1.4;display:block;margin-top:13px}.record-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:52px}.record{background:#fff;padding:27px 22px;min-height:210px}.record .label{margin-bottom:18px}.record h3{font-size:24px;line-height:1.25;margin:0}.record p{font-size:15px;color:var(--muted);line-height:1.5;margin:16px 0 0}.record-footer{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-top:24px}.record-footer div{padding:15px 17px;background:#e7f3f8;color:#135d7b;font-size:16px;font-weight:800;text-align:center}.risk-layout{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:36px}.risk-stack{display:grid;grid-template-columns:1fr 1fr;gap:12px}.risk{background:#fff;border:1px solid var(--line);padding:20px 18px;min-height:110px}.risk b{font-size:18px;line-height:1.25;display:block}.risk span{display:block;font-size:13px;color:var(--muted);line-height:1.4;margin-top:8px}.safety-panel{background:var(--navy);color:#fff;padding:30px}.safety-panel h3{font-size:26px;margin:0 0 18px}.safety-panel p{color:#d6e6ed;font-size:16px;line-height:1.55;margin:0}.patrol{margin-top:30px;border-top:1px solid rgba(255,255,255,.3);padding-top:19px;color:#a9ddf0;font-weight:900;font-size:16px}.manager-layout{display:grid;grid-template-columns:.65fr 1.35fr;gap:46px;margin-top:26px;height:515px}.manager-photo{background:#fff;border:1px solid var(--line);padding:14px;display:flex;align-items:center;justify-content:center}.manager-photo img{width:100%;height:100%;object-fit:contain}.manager-data{display:flex;flex-direction:column;justify-content:center}.manager-data h2{font-size:52px;letter-spacing:-.06em;margin:8px 0 0}.manager-data .role{color:var(--muted);font-size:20px;margin-top:9px}.experience-row{display:flex;align-items:end;margin:32px 0}.experience-row .number{font-size:112px}.experience-row span{font-size:19px;font-weight:900;line-height:1.15;margin-left:12px;padding-bottom:10px}.qual{display:grid;grid-template-columns:1fr 1fr;gap:12px}.qual div{padding:18px;background:#fff;border:1px solid var(--line);font-size:16px;font-weight:800}.support{display:grid;grid-template-columns:1fr .8fr;gap:28px;margin-top:36px;height:500px}.hub{display:flex;align-items:center;justify-content:center;background:var(--navy);color:#fff;position:relative;min-height:500px}.hub .center{width:240px;height:240px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-align:center;background:var(--blue);font-size:25px;font-weight:900;line-height:1.25;box-shadow:0 0 0 22px rgba(0,133,206,.16)}.hub .orbit{position:absolute;padding:12px 14px;background:#fff;color:var(--ink);border:1px solid #bed0db;font-size:15px;font-weight:900}.hub .o1{left:35px;top:52px}.hub .o2{right:35px;top:52px}.hub .o3{left:25px;bottom:58px}.hub .o4{right:25px;bottom:58px}.hub .o5{left:50%;top:29px;transform:translateX(-50%)}.org-small{background:#fff;border:1px solid var(--line);padding:16px;display:flex;align-items:center}.org-small img{width:100%;height:100%;object-fit:contain}.change-flow{display:grid;grid-template-columns:repeat(8,1fr);border-top:4px solid var(--blue);margin-top:64px}.change-flow div{min-height:170px;padding:24px 12px;border-left:1px solid var(--line)}.change-flow div:last-child{border-right:1px solid var(--line)}.change-flow b{font-size:17px;line-height:1.35;display:block}.change-flow span{font-size:13px;color:var(--muted);display:block;margin-top:14px;line-height:1.4}.change-note{margin-top:44px;background:#fff;border:1px solid var(--line);padding:30px 32px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px}.change-note div{border-left:3px solid var(--blue);padding-left:16px}.change-note b{font-size:20px}.change-note p{font-size:15px;color:var(--muted);line-height:1.45;margin:8px 0 0}.after-layout{display:grid;grid-template-columns:1.2fr .8fr;gap:26px;margin-top:29px;height:500px}.after-left{background:#fff;border:1px solid var(--line);padding:28px}.after-left h3{font-size:28px;margin:0 0 18px}.after-flow{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border-top:4px solid var(--blue);margin-top:35px}.after-flow div{padding:18px 10px;min-height:180px;border-left:1px solid var(--line)}.after-flow div:last-child{border-right:1px solid var(--line)}.after-flow b{font-size:16px;line-height:1.35;display:block}.after-flow span{font-size:12px;color:var(--muted);line-height:1.4;display:block;margin-top:10px}.warranty{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px}.warranty div{padding:15px;border:1px solid var(--line);background:#f9fafb}.warranty b{font-size:20px;color:var(--blue)}.warranty span{display:block;font-size:13px;color:var(--muted);margin-top:5px}.foundation-box{background:var(--navy);color:#fff;padding:31px;display:flex;flex-direction:column;justify-content:space-between}.foundation-box .year{font-size:94px;font-weight:900;letter-spacing:-.09em;color:#fff;line-height:.85}.foundation-box h3{font-size:28px;line-height:1.25;margin:24px 0 0}.foundation-box p{font-size:15px;color:#d7e6ed;line-height:1.55;margin:16px 0 0}.businesses{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,.25);margin-top:24px}.businesses div{padding:14px;background:rgba(255,255,255,.06);font-size:14px;font-weight:800}.closing{background:var(--navy);color:#fff;padding:0;display:flex;align-items:center;justify-content:center}.closing:after{opacity:.1}.closing .closing-inner{width:100%;max-width:1100px;padding:0 84px}.closing h2{font-size:30px;letter-spacing:.03em;font-weight:500;color:#d6e6ed;margin:0 0 46px}.closing-list{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.28)}.closing-list div{padding:30px 25px;background:rgba(255,255,255,.05);min-height:200px}.closing-list .no{font-size:14px;color:#79c9ea;font-weight:900;letter-spacing:.12em}.closing-list b{display:block;font-size:28px;line-height:1.25;margin-top:35px}.closing .closing-end{font-size:18px;line-height:1.6;color:#d6e6ed;margin-top:38px}.closing .closing-end strong{color:#fff}
+#topbar{position:fixed;z-index:30;left:50%;top:18px;transform:translateX(-50%);width:min(1340px,calc(100vw - 36px));display:flex;justify-content:space-between;align-items:center;pointer-events:none;color:#263746}.top-left,.top-right{display:flex;align-items:center;gap:12px}.top-left>* ,.top-right>*{pointer-events:auto}.top-section{font-size:12px;letter-spacing:.11em;color:var(--blue);font-weight:900}.top-title{font-size:13px;font-weight:800;padding-left:12px;border-left:1px solid #b8c3ca;max-width:350px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.planned{font-size:12px;color:#61717c;font-variant-numeric:tabular-nums}.elapsed{font-size:12px;color:var(--blue);font-weight:900;font-variant-numeric:tabular-nums}.topbar-dark{color:#e4eff3}.topbar-dark .top-section{color:#7bd0f1}.topbar-dark .top-title,.topbar-dark .planned{color:#b8cbd5;border-color:#527184}.topbar-dark .elapsed{color:#75d1f4}
+#controls{position:fixed;z-index:40;left:50%;bottom:18px;transform:translateX(-50%);display:flex;align-items:center;gap:7px;padding:8px 10px;border:1px solid rgba(20,36,51,.13);background:rgba(255,255,255,.92);box-shadow:0 9px 32px rgba(17,37,52,.16);border-radius:999px;backdrop-filter:blur(12px)}#controls button{border:0;background:#eef2f4;color:#263746;border-radius:999px;padding:9px 13px;font-size:12px;font-weight:900;cursor:pointer;white-space:nowrap}#controls button:hover{background:#dceaf1;color:#075e8e}#controls button:disabled{opacity:.35;cursor:default}.counter{min-width:65px;text-align:center;font-size:12px;color:#5a6872;font-weight:900;font-variant-numeric:tabular-nums}.progress{position:fixed;z-index:50;left:0;bottom:0;height:4px;background:var(--blue);transition:width .2s}.nav-dark{background:rgba(11,32,56,.94);border-color:rgba(255,255,255,.2)}.nav-dark button{background:#1e3b55;color:#e9f3f7}.nav-dark .counter{color:#c6d9e1}
+#notes{position:fixed;z-index:60;right:24px;top:62px;width:min(440px,calc(100vw - 48px));max-height:calc(100vh - 150px);overflow:auto;display:none;padding:24px;background:rgba(255,255,255,.97);border:1px solid rgba(20,36,51,.17);box-shadow:0 18px 55px rgba(11,32,56,.2)}#notes.open{display:block}#notes h3{margin:0 0 18px;font-size:18px;color:var(--blue)}#notes dl{margin:0;display:grid;grid-template-columns:96px 1fr;gap:10px 15px;font-size:14px;line-height:1.5}#notes dt{font-weight:900;color:#6a7881}#notes dd{margin:0;color:#263746}.notes-close{float:right;border:0;background:transparent;color:#60717b;font-size:18px;cursor:pointer}
+#overview{position:fixed;inset:0;z-index:70;display:none;overflow:auto;padding:80px 60px;background:rgba(8,25,43,.94);color:#fff}.overview-open{display:block!important}.overview-head{max-width:1280px;margin:0 auto 25px;display:flex;justify-content:space-between;align-items:center}.overview-head h2{margin:0;font-size:27px}.overview-head button{border:0;border-radius:999px;padding:9px 15px;background:#dceaf1;color:#163149;font-weight:900}.thumb-grid{max-width:1280px;margin:auto;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.thumb{background:#fff;color:var(--ink);min-height:125px;padding:15px;cursor:pointer;border:3px solid transparent}.thumb:hover{border-color:var(--blue)}.thumb .tno{color:var(--blue);font-size:12px;font-weight:900;letter-spacing:.12em}.thumb b{display:block;font-size:16px;line-height:1.3;margin-top:13px}.thumb span{display:block;font-size:12px;color:var(--muted);margin-top:10px}.thumb.chapter-thumb{background:#173653;color:#fff}.thumb.chapter-thumb b{color:#fff}.thumb.chapter-thumb span{color:#b7d0db}
+@media(max-width:900px){#stage{width:100vw;height:56.25vw;top:50%}.slide{padding:42px 36px 62px}.title{font-size:30px}.lead{font-size:16px}.cover-copy{left:36px;top:52px;max-width:64%}.cover-copy h1{font-size:36px}.cover-copy h1 span{font-size:26px}.cover-brand{left:36px;bottom:32px}.cover-brand img{width:155px}.page-mark{right:36px}.bottom-kicker{left:36px}.top-title{max-width:180px}.top-right .planned{display:none}#controls{bottom:10px}.thumb-grid{grid-template-columns:repeat(2,1fr)}.fact-board,.metric-page,.technical,.soffit-layout,.manager-layout,.support,.after-layout{height:auto}.fact-board{grid-template-columns:1fr}.fact-board .photo-panel{height:250px}.fact-side{grid-template-columns:repeat(4,1fr)}.fact{min-height:130px;padding:12px}.fact .number{font-size:36px}.fact b{font-size:12px}.promise h3{font-size:21px}.promise p{font-size:12px}.plan-wrap{height:auto}.plan-img{height:360px}.route-legend{grid-template-columns:1fr 1fr}.metric-page{grid-template-columns:1fr 1fr}.metric-block,.metric-photo{height:360px}.metric-block .number{font-size:110px}.compare-pane li{font-size:14px}.gate-map{gap:4px}.gate{padding:14px 9px;min-height:190px}.gate h3{font-size:15px}.gate p{font-size:11px}.schedule-row{grid-template-columns:100px 1fr 1fr}.schedule-row b{font-size:13px}.tile-flow .tf{padding:20px 6px}.tile-flow b{font-size:11px}.tile-flow span{font-size:9px}.record h3{font-size:17px}.record p{font-size:11px}.risk-layout{grid-template-columns:1fr 1fr}.risk{min-height:80px;padding:13px}.risk b{font-size:14px}.risk span{font-size:11px}.manager-data h2{font-size:34px}.experience-row .number{font-size:80px}.qual div{font-size:12px;padding:12px}.change-flow div{padding:18px 5px}.change-flow b{font-size:12px}.change-flow span{font-size:9px}.after-flow div{padding:14px 5px}.after-flow b{font-size:12px}.after-flow span{font-size:9px}.foundation-box .year{font-size:68px}.foundation-box h3{font-size:20px}.closing .closing-inner{padding:0 36px}.closing-list div{padding:22px 15px}.closing-list b{font-size:20px}}
+</style>
+</head>
+<body>
+<div id="stage">
+  <section class="slide hero-cover active" data-id="01" data-section="PROLOGUE" data-title="表紙" data-duration="0:30"><div class="cover-photo"></div><div class="cover-shade"></div><div class="cover-copy"><div class="eyebrow">施工会社選定ヒアリング</div><h1>レーベンリヴァーレ坂戸リッツ<span>大規模修繕工事</span></h1><p class="sub">施工会社として選定された場合、この建物の工事がどう進むのか。</p></div><div class="cover-brand"><img src="assets/nakamura-logo.png" alt="NAKAMURA"><small>施工計画・品質・安全・居住者対応</small></div></section>
+  <section class="slide" data-id="02" data-section="PROLOGUE" data-title="最初に気になったこと" data-duration="1:10"><div class="page-mark">01 / 32</div><div class="eyebrow">PROLOGUE / WHAT WE SAW</div><h1 class="title">この工事で、私たちが最初に<br><strong>気になったことがあります。</strong></h1><div class="fact-board"><div class="photo-panel"><img src="assets/building-exterior.png" alt="建物外観"><div class="photo-caption">現地外観｜14階建ての集合住宅</div></div><div class="fact-side"><div class="fact"><span class="label">01 / scale</span><b>大きな建物ほど、<br>生活動線が多い</b><span><span class="number">128</span><span class="unit">戸</span></span></div><div class="fact"><span class="label">02 / mobility</span><b>工事中も、車・自転車・<br>歩行者が動き続ける</b><span><span class="number">127</span><span class="unit">台</span></span></div><div class="fact"><span class="label">03 / access</span><b>北側車路は、<br>足場の掛け方で変わる</b><span><span class="number">2.7</span><span class="unit">m</span></span></div><div class="fact"><span class="label">04 / defects</span><b>見えている劣化だけでは、<br>全容を決められない</b><span class="note-chip">足場設置後に調査</span></div></div></div><div class="bottom-kicker">今日は、会社紹介から始めません。</div></section>
+  <section class="slide" data-id="03" data-section="PROLOGUE" data-title="建物の規模と暮らしの密度" data-duration="1:25"><div class="page-mark">02 / 32</div><div class="eyebrow">PROLOGUE / SITE CONDITIONS</div><h1 class="title">建物の規模ではなく、<br><strong>暮らしの密度</strong>を見る。</h1><p class="lead">現地条件を、工事の難しさではなく「日常と同時に動くもの」として捉えます。</p><div class="grid four" style="margin-top:38px"><div class="panel"><span class="label">building</span><div><span class="number">14</span><span class="unit">階建て</span></div><p>鉄筋コンクリート造</p></div><div class="panel"><span class="label">residents</span><div><span class="number">128</span><span class="unit">戸</span></div><p>居住者様の生活を止めない</p></div><div class="panel"><span class="label">parking</span><div><span class="number">127</span><span class="unit">台</span></div><p>機械式116台＋平置11台</p></div><div class="panel"><span class="label">cycles</span><div><span class="number">254</span><span class="unit">台</span></div><p>自転車254台＋バイク14台</p></div></div><div class="rule"></div><div class="grid three"><div><span class="label">重点管理課題 01</span><h3 style="font-size:24px;margin:13px 0 0">北側車路<br>有効幅 約2.7m</h3></div><div><span class="label">重点管理課題 02</span><h3 style="font-size:24px;margin:13px 0 0">EV外壁タイル<br>広範囲の浮き</h3></div><div><span class="label">重点管理課題 03</span><h3 style="font-size:24px;margin:13px 0 0">上層階軒天<br>塗膜剥離</h3></div></div></section>
+  <section class="slide" data-id="04" data-section="PROLOGUE" data-title="3つの約束" data-duration="1:00"><div class="page-mark">03 / 32</div><div class="eyebrow">PROLOGUE / OUR COMMITMENT</div><h1 class="title">今日は、NAKAMURAという会社の説明ではなく、<br><strong>このマンションを私たちならどう施工するか。</strong></h1><div class="promise-row"><div class="promise"><div class="no">01 / DAILY LIFE</div><h3>暮らしを<br>止めない</h3><p>128戸の居住者様の生活、車両、自転車、バイク、歩行者動線への影響を<strong>可能な限り抑える。</strong></p></div><div class="promise"><div class="no">02 / DIAGNOSIS</div><h3>劣化を<br>見逃さない</h3><p><strong>調査 → 数量化 → 試験 → 協議 → 承認 → 本施工</strong>のプロセスを守る。</p></div><div class="promise"><div class="no">03 / TEAM</div><h3>現場を一人に<br>背負わせない</h3><p>安全環境部、工事、積算、営業、アフターが<strong>会社として現場を支える。</strong></p></div></div><div class="bottom-kicker">この3つを、これから37分かけて具体的に証明します。</div></section>
+  <section class="slide chapter" data-id="05" data-section="DAY 0" data-title="着工前" data-duration="0:25"><div class="chapter-no">02 / DAY 0</div><div class="chapter-copy"><div class="en">Before Construction</div><div class="ja">着工する前に、工事の成否はかなり決まる</div><div class="rule"></div></div><div class="orb one"></div><div class="orb two"></div><div class="orb three"></div></section>
+  <section class="slide" data-id="06" data-section="DAY 0" data-title="着工前の準備" data-duration="1:30"><div class="page-mark">04 / 32</div><div class="eyebrow">DAY 0 / READINESS</div><h1 class="title">着工する前に、<br><strong>工事の成否はかなり決まる。</strong></h1><p class="lead">キックオフで、仮設・工程・居住者対応・品質・安全を同じ地図に載せます。</p><div class="steps"><div class="step"><div class="label">01 / kickoff</div><b>契約・貸与書類<br>情報の確認</b><p>キックオフチェックリストに沿って前提をそろえる。</p></div><div class="step"><div class="label">02 / site</div><b>作業範囲・<br>運搬経路を確認</b><p>居住者導線、トラック、荷揚げ位置まで確認。</p></div><div class="step"><div class="label">03 / plan</div><b>仮設・楊重・<br>施工計画を整える</b><p>使用材料予定数量表と検査の位置を入れる。</p></div><div class="step"><div class="label">04 / explain</div><b>工事説明会の<br>準備</b><p>2週間工程、当日・翌日予定、洗濯物情報を掲示。</p></div><div class="step"><div class="label">05 / approve</div><b>協議・確認を経て<br>現場へ</b><p>計画位置は組合様協議の上で決定する。</p></div></div><div class="panel blue" style="margin-top:30px"><span class="label" style="color:#8bd8f5">DAY 0 / DECISION</span><p style="margin-top:9px">着工前に、現場で起きる「迷い」を減らしておく。これが、暮らしを止めないための最初の施工です。</p></div></section>
+  <section class="slide" data-id="07" data-section="DAY 0" data-title="生活を図面化する" data-duration="1:20"><div class="page-mark">05 / 32</div><div class="eyebrow">DAY 0 / LIVING MAP</div><h1 class="title">現場に入る前に、<br><strong>生活を図面化する。</strong></h1><div class="plan-wrap"><div class="plan-img"><img src="assets/temporary-plan.png" alt="総合仮設計画図"></div><div class="route-legend"><div class="legend-item"><i class="legend-dot"></i><div><b>居住者歩行動線</b><p>安全通路確保・暗証番号仮設扉・迂回通路</p></div></div><div class="legend-item"><i class="legend-dot"></i><div><b>車両動線</b><p>駐車車両の移動・出入口での移動対応</p></div></div><div class="legend-item"><i class="legend-dot"></i><div><b>自転車・バイク動線</b><p>西側通路・南東側通路へ迂回</p></div></div><div class="legend-item"><i class="legend-dot"></i><div><b>工事のための場所</b><p>仮設事務所・資材倉庫・産廃置場・植栽仮置場</p></div></div><div class="panel" style="margin-top:4px"><span class="label">IMPORTANT</span><p style="margin-top:10px">この計画図にない情報を勝手に足すのではなく、現地で確認し、管理組合様と協議して確定します。</p></div></div></div></section>
+  <section class="slide chapter" data-id="08" data-section="DAY 1" data-title="仮設が立つ日" data-duration="0:25"><div class="chapter-no">03 / DAY 1</div><div class="chapter-copy"><div class="en">Temporary Works</div><div class="ja">足場が立ち、現場が動き始める</div><div class="rule"></div></div><div class="orb one"></div><div class="orb two"></div><div class="orb three"></div></section>
+  <section class="slide" data-id="09" data-section="DAY 1" data-title="総合仮設計画" data-duration="1:30"><div class="page-mark">06 / 32</div><div class="eyebrow">DAY 1 / TEMPORARY WORKS</div><h1 class="title">足場が立つ日、<br><strong>現場のルールが見える。</strong></h1><p class="lead">足場・車両・自転車・歩行者・資材・廃材を、ひとつの計画として運用します。</p><div class="grid three" style="margin-top:38px"><div class="photo-panel" style="height:300px"><img src="assets/north-scaffold.jpg" alt="北側足場施工例"><div class="photo-caption">北側駐車場上部の足場｜施工例</div></div><div class="panel" style="min-height:300px"><span class="label">ON SITE</span><h3>足場の外側だけでなく、<br>内側の生活を見る。</h3><p>駐車車両、自転車・バイク、植栽、キッズルームの一時利用まで、現場の外にある日常も計画に入れます。</p><div class="rule"></div><span class="note-chip">計画位置は組合様協議の上決定</span></div><div class="panel blue" style="min-height:300px"><span class="label" style="color:#8bd8f5">SITE CONTROL</span><h3>安全対策を、<br>配置で見える化。</h3><p>朝顔・水平養生、搬入出安全誘導員、金網養生、安全標識、安全通路、センサーライトを計画図に置く。</p></div></div><div class="rule"></div><div class="grid four"><div><span class="label">移動</span><p class="tiny">駐車車両・自転車・バイク</p></div><div><span class="label">保護</span><p class="tiny">植栽・既存設備・ガラス</p></div><div><span class="label">運搬</span><p class="tiny">工事車両・資材搬入</p></div><div><span class="label">防犯</span><p class="tiny">暗証番号仮設扉・センサーライト</p></div></div></section>
+  <section class="slide" data-id="10" data-section="DAY 1" data-title="北側車路 2.7m" data-duration="1:00"><div class="page-mark">07 / 32</div><div class="eyebrow">DAY 1 / NORTH ACCESS</div><h1 class="title">通常の足場では、<br><strong>車路有効幅 約2.7m。</strong></h1><div class="metric-page"><div class="metric-block"><span class="label">NORTH PARKING / EXISTING CONDITION</span><div><span class="number">2.7</span><span class="unit">m</span></div><p>地上からの梁枠開口足場では、お車の出入が困難になる。</p></div><div class="metric-photo"><div class="photo-panel"><img src="assets/north-scaffold.jpg" alt="北側駐車場足場"><div class="photo-caption">北側駐車場上部の足場</div></div><div class="photo-panel"><img src="assets/north-scaffold-detail.jpg" alt="ベランダキャッチャー施工例"><div class="photo-caption">足場を浮かせる施工例</div></div></div></div><div class="bottom-kicker">約2.7mを、単なる数字で終わらせない。</div></section>
+  <section class="slide" data-id="11" data-section="DAY 1" data-title="足場の掛け方から考える" data-duration="1:30"><div class="page-mark">08 / 32</div><div class="eyebrow">DAY 1 / NORTH ACCESS</div><h1 class="title">だから、<br><strong>足場の掛け方から考えます。</strong></h1><div class="compare"><div class="compare-pane normal"><div class="head"><span>通常案</span><b>地上から梁枠開口足場</b></div><ul><li>車路有効幅 約2.7m</li><li>お車の出入が困難</li><li>足場組立・解体時は一時移動</li></ul></div><div class="compare-arrow">→</div><div class="compare-pane proposed"><div class="head"><span>提案の考え方</span><b>ベランダキャッチャー等</b></div><ul><li>足場を浮かせて車路を確保</li><li>生活への影響を減らす合理案</li><li>支持条件・安全性を確認して確定</li></ul></div></div><div class="tech-note">万能な提案ではありません。現地寸法・支持条件・使用車両を確認し、足場専門業者・監理者との協議によって最終決定します。</div></section>
+  <section class="slide" data-id="12" data-section="DAY 1" data-title="寸法と支持条件を確認する" data-duration="0:55"><div class="page-mark">09 / 32</div><div class="eyebrow">DAY 1 / VERIFY BEFORE BUILD</div><h1 class="title">足場は、<strong>寸法・支持条件・車両</strong>を<br>確認して決める。</h1><div class="checks"><div class="check"><div class="label">01 / dimension</div><b>現地寸法</b><p>北側車路の有効幅、梁枠開口、柱部の通路を現地で確認。</p></div><div class="check"><div class="label">02 / support</div><b>支持条件</b><p>ベランダキャッチャー等の支持条件と安全性を確認。</p></div><div class="check"><div class="label">03 / operation</div><b>使用車両</b><p>お車の出入・工事車両・搬入方法を含めて協議。</p></div></div><div class="panel blue" style="margin-top:42px;text-align:center"><span class="label" style="color:#8bd8f5">DECISION</span><p style="font-size:20px;margin-top:11px">足場専門業者・監理者・管理組合様との確認を経て、最終計画へ進みます。</p></div></section>
+  <section class="slide chapter" data-id="13" data-section="WEEK 1–4" data-title="すぐに直さず、まず調べる" data-duration="0:25"><div class="chapter-no">04 / WEEK 1–4</div><div class="chapter-copy"><div class="en">Investigate Before We Build</div><div class="ja">すぐに直すのではなく、まず調べる</div><div class="rule"></div></div><div class="orb one"></div><div class="orb two"></div><div class="orb three"></div></section>
+  <section class="slide" data-id="14" data-section="WEEK 1–4" data-title="調査から数量化へ" data-duration="1:40"><div class="page-mark">10 / 32</div><div class="eyebrow">WEEK 1–4 / DIAGNOSIS</div><h1 class="title">すぐに直すのではなく、<br><strong>まず調べる。</strong></h1><p class="lead">足場設置後の全面調査で、見えるものを増やし、補修範囲を数量化します。</p><div class="steps"><div class="step"><div class="label">01 / scaffold</div><b>足場設置</b><p>近接できる状態をつくる。</p></div><div class="step"><div class="label">02 / survey</div><b>全面打診・<br>目視調査</b><p>浮き・剥離・脆弱部を確認。</p></div><div class="step"><div class="label">03 / mark</div><b>マーキング・<br>写真</b><p>現場と図面を対応させる。</p></div><div class="step"><div class="label">04 / count</div><b>数量化・<br>集計</b><p>面別・工種別に整理。</p></div><div class="step"><div class="label">05 / discuss</div><b>協議・承認後に<br>本施工</b><p>調査結果を報告して進む。</p></div></div><div class="grid three" style="margin-top:30px"><div class="panel"><span class="label">記録 01</span><h3>調査図</h3><p>マークと補修図を照合する。</p></div><div class="panel"><span class="label">記録 02</span><h3>数量表</h3><p>補修範囲と数量を見える化する。</p></div><div class="panel"><span class="label">記録 03</span><h3>被害写真</h3><p>後から説明できる形で残す。</p></div></div></section>
+  <section class="slide" data-id="15" data-section="WEEK 1–4" data-title="情報不足を減らす" data-duration="1:20"><div class="page-mark">11 / 32</div><div class="eyebrow">WEEK 1–4 / RESIDENT COMMUNICATION</div><h1 class="title">情報不足が、<br><strong>不満をつくる。</strong></h1><div class="info-rhythm"><div class="rhythm"><h3>生活に必要な情報を先に届ける</h3><div class="line"><span>2週間工程</span><b>全体の見通しを持てる</b></div><div class="line"><span>週間予定</span><b>来週の制限を予測できる</b></div><div class="line"><span>当日・翌日</span><b>洗濯物・騒音・臭気・通行を判断できる</b></div><div class="line"><span>個別事情</span><b>バルコニーアンケート、室外機等を確認</b></div></div><div class="rhythm"><h3>要望・苦情が起きたら</h3><div class="resident-flow"><div><b>傾聴</b><span>まず話を聞く</span></div><div><b>記録</b><span>事実を残す</span></div><div><b>現場確認</b><span>状態を確かめる</span></div><div><b>期限提示</b><span>回答時期を伝える</span></div><div><b>対応・再発防止</b><span>終わりまで共有</span></div></div><div class="tech-note" style="margin-top:26px">「申し訳ございません」で終わらせず、傾聴 → 記録 → 現場確認 → 回答 → 対応 → 再発防止の順で扱います。</div></div></div></section>
+  <section class="slide chapter" data-id="16" data-section="DECISION GATE" data-title="確認してから次へ進む" data-duration="0:25"><div class="chapter-no">05 / DECISION GATE</div><div class="chapter-copy"><div class="en">Stop. Report. Agree.</div><div class="ja">ここで一度止まり、報告し、確認・承認を得てから次へ進む</div><div class="rule"></div></div><div class="orb one"></div><div class="orb two"></div><div class="orb three"></div></section>
+  <section class="slide" data-id="17" data-section="DECISION GATE" data-title="5つのDecision Gate" data-duration="1:45"><div class="page-mark">12 / 32</div><div class="eyebrow">DECISION GATE / CONTROL POINTS</div><h1 class="title">契約後、施工会社が勝手に進めていく工事ではない。</h1><p class="lead">工程表に設定された確認タイミングを、管理組合様・監理者様と共有する「止まる場所」として運用します。</p><div class="gate-map"><div class="gate"><div class="gate-no">GATE 01</div><h3>足場設置後の<br>全面調査</h3><p>見えていなかった劣化を、近接調査で確認。</p><span class="gate-stop">報告する</span></div><div class="gate"><div class="gate-no">GATE 02</div><h3>数量・範囲・<br>追加増減確認</h3><p>調査図・数量・写真・金額を整理。</p><span class="gate-stop">協議する</span></div><div class="gate"><div class="gate-no">GATE 03</div><h3>試験施工・<br>仕上がり確認</h3><p>タイル・リシン等の基準を決める。</p><span class="gate-stop">承認する</span></div><div class="gate"><div class="gate-no">GATE 04</div><h3>足場解体前<br>検査</h3><p>見えなくなる前に、最終状態を確認。</p><span class="gate-stop">是正する</span></div><div class="gate"><div class="gate-no">GATE 05</div><h3>追加増減・<br>竣工確認</h3><p>金額・仕上がり・書類を確認。</p><span class="gate-stop">引き渡す</span></div></div><div class="panel blue" style="margin-top:31px;text-align:center"><p style="font-size:19px">ここで一度止まり、報告し、確認・承認を得てから次へ進む。</p></div></section>
+  <section class="slide" data-id="18" data-section="DECISION GATE" data-title="A案・B案は意思決定の地図" data-duration="1:25"><div class="page-mark">13 / 32</div><div class="eyebrow">DECISION GATE / SCHEDULE MAP</div><h1 class="title">A案・B案は、工程表ではなく<br><strong>意思決定の地図</strong>として見る。</h1><div class="schedule-map"><div class="schedule-row head"><div>大きな工程</div><div>A案</div><div>B案</div></div><div class="schedule-row"><div>仮設 → 調査</div><div><b>2/1–8/31</b><br><span>全日211日／実働140日</span></div><div><b>2/1–9/30</b><br><span>全日242日／実働160日</span></div></div><div class="schedule-row"><div>下地・タイル</div><div><b>約50％調査 → 100％換算</b><br><span>数量確認・承認後に補修</span></div><div><b>約50％調査 → 100％換算</b><br><span>数量確認・承認後に補修</span></div></div><div class="schedule-row"><div>検査・引渡し</div><div><b>足場解体前検査 → 竣工検査</b></div><div><b>足場解体前検査 → 竣工検査</b></div></div></div><div class="grid four" style="margin-top:26px"><div class="panel"><span class="label">GATE 01</span><h3>全面調査</h3></div><div class="panel"><span class="label">GATE 02</span><h3>実数精算確認</h3></div><div class="panel"><span class="label">GATE 04</span><h3>足場解体前検査</h3></div><div class="panel"><span class="label">GATE 05</span><h3>追加増減・竣工</h3></div></div></section>
+  <section class="slide chapter" data-id="19" data-section="THE MOMENT OF TRUTH" data-title="足場に上がって初めて分かる" data-duration="0:25"><div class="chapter-no">06 / THE MOMENT OF TRUTH</div><div class="chapter-copy"><div class="en">What The Building Tells Us</div><div class="ja">足場に上がって初めて分かる建物の本当の状態</div><div class="rule"></div></div><div class="orb one"></div><div class="orb two"></div><div class="orb three"></div></section>
+  <section class="slide" data-id="20" data-section="THE MOMENT OF TRUTH" data-title="EV外壁タイルの現状" data-duration="1:20"><div class="page-mark">14 / 32</div><div class="eyebrow">THE MOMENT OF TRUTH / TILE</div><h1 class="title">私たちは、今この場で<br><strong>補修数量を断定しません。</strong></h1><div class="technical"><div class="tech-copy"><div class="quote">足場がない状態で<br><em>断定する方が危険</em>だからです。</div><div class="tech-note">現状資料では、EV外壁タイルは10〜8階・5〜3階で広範囲浮きが確認されています。一方、周囲を含む全容は足場設置後の調査で確認します。</div></div><div class="photo-triptych"><div class="photo-panel"><img src="assets/ev-tile-wide.jpg" alt="EV外壁タイルの広範囲浮き"><div class="photo-caption">10〜8階・5〜3階で広範囲浮き</div></div><div class="photo-panel"><img src="assets/ev-tile-edge.jpg" alt="タイル浮き周辺"><div class="photo-caption">周囲にも浮きが進行している可能性</div></div><div class="photo-panel"><img src="assets/ev-tile-substrate.jpg" alt="タイル撤去後の下地"><div class="photo-caption">剥離界面・下地を確認</div></div></div></div></section>
+  <section class="slide" data-id="21" data-section="THE MOMENT OF TRUTH" data-title="EV外壁タイルの施工判断" data-duration="1:50"><div class="page-mark">15 / 32</div><div class="eyebrow">THE MOMENT OF TRUTH / TILE PROCESS</div><h1 class="title">EV外壁タイル：<br><strong>調べて、試して、承認を得る。</strong></h1><div class="tile-flow"><div class="tf"><b>全面打診</b><span>近接して状態を確認</span></div><div class="tf"><b>剥離界面確認</b><span>コンクリート・張付けモルタル等</span></div><div class="tf"><b>撤去範囲確認</b><span>脆弱部を残さない</span></div><div class="tf"><b>下地目荒らし</b><span>全面カップ掛けを提案</span></div><div class="tf"><b>清掃</b><span>ホコリ・ゴミを除去</span></div><div class="tf"><b>試験施工</b><span>施工前に基準を確認</span></div><div class="tf"><b>引張接着力試験</b><span>付着を数値で確認</span></div><div class="tf"><b>監理者確認</b><span>承認を得る</span></div><div class="tf"><b>本施工</b><span>決めた方法で進める</span></div></div><div class="grid three" style="margin-top:37px"><div class="panel"><span class="label">既存条件</span><p style="margin-top:10px">吸水調整剤が残っている可能性、既存タイル周囲の浮き、打継目地を確認。</p></div><div class="panel"><span class="label">提案の根拠</span><p style="margin-top:10px">付着を妨げる要因を整理し、目荒らし・清掃・試験施工へつなげる。</p></div><div class="panel blue"><span class="label" style="color:#8bd8f5">断定しない</span><p style="margin-top:10px">数量・最終補修範囲は全面調査後、協議・承認を経て確定。</p></div></div></section>
+  <section class="slide" data-id="22" data-section="THE MOMENT OF TRUTH" data-title="上層階軒天の現状" data-duration="1:25"><div class="page-mark">16 / 32</div><div class="eyebrow">THE MOMENT OF TRUTH / SOFFIT</div><h1 class="title">軒天は、<br><strong>浮いているところだけ直して終わりではない。</strong></h1><div class="soffit-layout"><div class="soffit-photo-grid"><div class="photo-panel"><img src="assets/soffit-peel.jpg" alt="軒天塗膜剥離"><div class="photo-caption">塗膜が浮き、剥離した軒天</div></div><div class="photo-panel"><img src="assets/soffit-joint.jpg" alt="軒天型枠継目"><div class="photo-caption">型枠継目・段差</div></div><div class="photo-panel"><img src="assets/soffit-balcony.jpg" alt="バルコニー軒天"><div class="photo-caption">バルコニー面でも目視確認</div></div></div><div class="soffit-copy"><span class="label">WHAT WE SAW</span><h3>既存補修跡も含めて、<br>下地から確認する。</h3><p>資料では上層階軒天に塗膜浮き・剥離と過去補修跡が確認されています。足場設置後に状態を確定し、目地スパン単位で整理します。</p><ul class="soffit-list"><li>脆弱塗膜</li><li>過去補修部</li><li>型枠継目・段差</li><li>目地単位の整理</li><li>下地状態確認</li></ul></div></div></section>
+  <section class="slide" data-id="23" data-section="THE MOMENT OF TRUTH" data-title="軒天の補修プロセス" data-duration="1:25"><div class="page-mark">17 / 32</div><div class="eyebrow">THE MOMENT OF TRUTH / SOFFIT PROCESS</div><h1 class="title">再発防止と、<br><strong>既存意匠への調和。</strong></h1><div class="soffit-flow"><div class="sf"><b>脆弱塗膜・過去補修部</b><span>目地スパンで撤去範囲を整理</span></div><div class="sf"><b>下地状態確認</b><span>型枠継目・段差を確認</span></div><div class="sf"><b>左官補修</b><span>軒天面を平滑に整える</span></div><div class="sf"><b>リシン試験施工</b><span>骨材・肌・色を確認</span></div><div class="sf"><b>承認 → 本施工</b><span>既存意匠と調和させる</span></div></div><div class="panel blue" style="margin-top:43px;text-align:center"><p style="font-size:19px">「浮いている箇所だけ」ではなく、下地・意匠・再発の可能性を確認してから、本施工へ進みます。</p></div></section>
+  <section class="slide chapter" data-id="24" data-section="CONSTRUCTION" data-title="品質と安全" data-duration="0:25"><div class="chapter-no">07 / CONSTRUCTION</div><div class="chapter-copy"><div class="en">Quality &amp; Safety</div><div class="ja">完成後に見えなくなる工程ほど、記録を残す</div><div class="rule"></div></div><div class="orb one"></div><div class="orb two"></div><div class="orb three"></div></section>
+  <section class="slide" data-id="25" data-section="CONSTRUCTION" data-title="品質は記録で説明する" data-duration="1:45"><div class="page-mark">18 / 32</div><div class="eyebrow">CONSTRUCTION / QUALITY ASSURANCE</div><h1 class="title">完成後に見えなくなる工程ほど、<br><strong>記録を残す。</strong></h1><div class="record-grid"><div class="record"><div class="label">01 / survey</div><h3>調査図・数量・写真</h3><p>現場のマーキングと補修図を合わせ、面別数量・被害写真を記録。</p></div><div class="record"><div class="label">02 / test</div><h3>試験施工・引張試験</h3><p>タイル貼り等は施工前に試験施工し、引張接着力試験を実施。</p></div><div class="record"><div class="label">03 / coating</div><h3>温湿度・希釈・膜厚</h3><p>施工条件、希釈、塗布量、膜厚など仕上がりを左右する記録を残す。</p></div><div class="record"><div class="label">04 / inspection</div><h3>充填・端末・是正</h3><p>シーリング充填状況、防水端末、自主・社内・監理者検査と是正確認。</p></div></div><div class="record-footer"><div>記録がある</div><div>説明できる</div><div>合意形成できる</div></div></section>
+  <section class="slide" data-id="26" data-section="CONSTRUCTION" data-title="安全・防犯はリスクから逆算" data-duration="1:30"><div class="page-mark">19 / 32</div><div class="eyebrow">CONSTRUCTION / SAFETY &amp; SECURITY</div><h1 class="title">「安全第一」で終わらせず、<br><strong>具体的リスクから逆算する。</strong></h1><div class="risk-layout"><div class="risk-stack"><div class="risk"><b>第三者災害</b><span>歩行者動線・落下物・ガラス付近の作業</span></div><div class="risk"><b>足場侵入・防犯</b><span>金網養生・暗証番号仮設扉・センサーライト</span></div><div class="risk"><b>火災・溶剤</b><span>火気・SDS・材料保管・作業手順</span></div><div class="risk"><b>漏水・設備</b><span>給湯器・ドレン・電気設備の養生と確認</span></div><div class="risk"><b>工事車両</b><span>搬入出・誘導員・車両出入口の管理</span></div><div class="risk"><b>生活への影響</b><span>騒音・臭気・通行制限を事前周知</span></div></div><div class="safety-panel"><span class="label" style="color:#8bd8f5">SECOND PAIR OF EYES</span><h3>安全環境部の巡回</h3><p>現場内部だけでは気づきにくいリスクを、現場の外側から確認。是正支援と再確認を行い、代理人一人の視野に依存しません。</p><div class="patrol">現場 → 巡回 → 是正 → 再確認</div><div style="margin-top:48px;border-top:1px solid rgba(255,255,255,.25);padding-top:20px;font-size:15px;color:#d6e6ed;line-height:1.5">重点は、第三者災害ゼロ・足場侵入防止・火災／漏水の予防です。</div></div></div></section>
+  <section class="slide chapter" data-id="27" data-section="TEAM" data-title="誰が責任を持つのか" data-duration="0:25"><div class="chapter-no">08 / TEAM</div><div class="chapter-copy"><div class="en">Who Takes Responsibility</div><div class="ja">ここまで考えた施工計画を、誰が実行するのか</div><div class="rule"></div></div><div class="orb one"></div><div class="orb two"></div><div class="orb three"></div></section>
+  <section class="slide" data-id="28" data-section="TEAM" data-title="現場代理人予定者" data-duration="1:20"><div class="page-mark">20 / 32</div><div class="eyebrow">TEAM / SITE MANAGER</div><h1 class="title">ここまで考えた施工計画を、<br><strong>誰が実行するのか。</strong></h1><div class="manager-layout"><div class="manager-photo"><img src="assets/site-manager-photo.png" alt="現場代理人予定者の写真"></div><div class="manager-data"><span class="label">PROPOSED SITE MANAGER / 資料記載</span><h2>柳生 博之</h2><div class="role">マンション改修事業本部 工事部長</div><div class="experience-row"><span class="number">35</span><span>年<br>経験</span></div><div class="qual"><div>1級建築施工管理技士</div><div>監理技術者資格者証</div></div><div class="rule"></div><p class="tiny">代表実績：シティタワー有明（33階・483戸）、プラウド新浦安パームコート（14階・550戸）、グランエスタ（20階・671戸）ほか。</p></div></div></section>
+  <section class="slide" data-id="29" data-section="TEAM" data-title="会社全体で支える" data-duration="1:25"><div class="page-mark">21 / 32</div><div class="eyebrow">TEAM / BACKUP SYSTEM</div><h1 class="title">ただし、<br><strong>その人一人には背負わせません。</strong></h1><div class="support"><div class="hub"><div class="orbit o5">営業</div><div class="orbit o1">安全環境部<br><small>巡回・是正支援</small></div><div class="orbit o2">工事チーム<br><small>工法・工程支援</small></div><div class="orbit o3">積算チーム<br><small>数量・金額支援</small></div><div class="orbit o4">アフター<br><small>引渡し後の窓口</small></div><div class="center">現場代理人<br><small>現場運営・管理・安全・工程・品質</small></div></div><div class="org-small"><img src="assets/org-chart.png" alt="工事管理組織図及び安全管理組織図"></div></div><div class="bottom-kicker">現場代理人を中心に、各部署が役割を持って支える。</div></section>
+  <section class="slide" data-id="30" data-section="TEAM" data-title="追加・変更工事" data-duration="1:25"><div class="page-mark">22 / 32</div><div class="eyebrow">TEAM / CHANGE CONTROL</div><h1 class="title">追加工事を、<br><strong>ブラックボックスにしない。</strong></h1><div class="change-flow"><div><b>調査</b><span>足場設置後の状態確認</span></div><div><b>数量化</b><span>範囲と数量を整理</span></div><div><b>写真・図面</b><span>根拠を残す</span></div><div><b>金額算定</b><span>実数・増減を整理</span></div><div><b>報告</b><span>管理組合・監理者へ</span></div><div><b>協議</b><span>内容と優先順位を確認</span></div><div><b>承認</b><span>進める範囲を決める</span></div><div><b>施工</b><span>合意した内容を実施</span></div></div><div class="change-note"><div><b>仕様書・質疑回答を優先</b><p>「協議の上決定」「別途精算」等の原文表現に沿って扱います。</p></div><div><b>数量と金額を分けて説明</b><p>調査結果、数量、単価・金額を一つずつ確認できる状態にします。</p></div><div><b>承認前に本施工へ進まない</b><p>追加・変更は、報告・協議・承認の後に施工します。</p></div></div></section>
+  <section class="slide" data-id="31" data-section="AFTER" data-title="竣工後も会社として残る" data-duration="1:50"><div class="page-mark">23 / 32</div><div class="eyebrow">AFTER / BEYOND COMPLETION</div><h1 class="title">足場を解体した後も、<br><strong>点検して終わりにはしない。</strong></h1><div class="after-layout"><div class="after-left"><h3>竣工 → 報告 → 補修 → 完了確認</h3><div class="after-flow"><div><b>竣工・保証書</b><span>引渡しと保証書提出</span></div><div><b>点検案内</b><span>発注者とスケジュール打合せ</span></div><div><b>アンケート・点検</b><span>居住者アンケート・共用部点検</span></div><div><b>結果報告・補修</b><span>日程調整・補修を実施</span></div><div><b>完了確認・報告書</b><span>補修完了を確認し提出</span></div></div><div class="warranty"><div><b>保証</b><span>各工事期間・担保は見積要項書・工事仕様書に準じて確認</span></div><div><b>窓口</b><span>NAKAMURAアフターメンテナンス専門部署</span></div></div></div><div class="foundation-box"><div><div class="label" style="color:#8bd8f5">WHY NAKAMURA / FOUNDATION</div><div class="year">1870</div><h3>この体制を、<br>長期で支える会社なのか。</h3><p>明治3年創業。マンション改修・建築・エネルギープラント・工場生産の4事業本部を展開し、技術共有と現場支援につなげる。</p></div><div class="businesses"><div>マンション改修</div><div>建築</div><div>エネルギープラント</div><div>工場生産</div></div></div></div></section>
+  <section class="slide closing" data-id="32" data-section="EPILOGUE" data-title="最後に3つだけ" data-duration="1:00"><div class="closing-inner"><h2>この3つを、本日40分かけて具体的にご説明してきました。</h2><div class="closing-list"><div><div class="no">01</div><b>暮らしを<br>止めない</b></div><div><div class="no">02</div><b>劣化を<br>見逃さない</b></div><div><div class="no">03</div><b>現場を一人に<br>背負わせない</b></div></div><div class="closing-end"><strong>工事を完成させる会社</strong>ではなく、<br><strong>この建物と居住者の生活を預けられる会社</strong>へ。</div></div></section>
 </div>
-</div>
-    </section>
-<section class="slide " data-title="北側車路有効幅" data-section="01 暮らしを止めない" data-duration="1:20" data-notes="北側車路有効幅約2.7m。数字の後に間を取る。">
-      <div class="page-chrome"><div><span>02</span><b>01 暮らしを止めない</b></div><div>施工会社選定ヒアリング</div></div>
-      <div class="slide-inner">
-<div class="two-col emphasis-left">
-  <div class="copy-block">
-    <div class="label">FIRST ISSUE</div>
-    <h2>今回、最初に見るべき課題は<br><strong>北側車路</strong>です。</h2>
-    <p>通常の梁枠開口足場では、車路有効幅が約2.7mになります。車両通行への影響が大きいため、ここを仮設計画の起点にしました。</p>
-  </div>
-  <div class="metric-visual">
-    <div class="plan-photo" style="background-image:url('assets/image-03.webp')"></div>
-    <div class="metric-box"><span>約</span><b>2.7</b><em>m</em><small>北側車路有効幅</small></div>
-  </div>
-</div>
-</div>
-    </section>
-<section class="slide " data-title="足場提案" data-section="01 暮らしを止めない" data-duration="2:30" data-notes="通常案と提案案を対比。万能策ではなく生活影響を減らす提案として説明。">
-      <div class="page-chrome"><div><span>03</span><b>01 暮らしを止めない</b></div><div>施工会社選定ヒアリング</div></div>
-      <div class="slide-inner">
-<div class="action-title"><div class="label">PROPOSAL</div><h2>だから、足場の支え方を変えます。</h2><p>ベランダキャッチャー等で支持方法を変更し、北側車路を可能な限り確保します。</p></div>
-<div class="compare-flat">
-  <div class="compare-pane">
-    <div class="pane-head"><span>通常案</span><b>約2.7m</b></div>
-    <div class="pane-img" style="background-image:url('assets/image-04.png')"></div>
-    <p>梁枠開口足場が車路側へ出るため、車両通行が困難。</p>
-  </div>
-  <div class="arrow-block">→</div>
-  <div class="compare-pane accent">
-    <div class="pane-head"><span>NAKAMURA案</span><b>支持方法を変更</b></div>
-    <div class="pane-img" style="background-image:url('assets/image-05.png')"></div>
-    <p>建物側から支える方法を検討し、生活影響を低減。</p>
-  </div>
-</div>
-<div class="footnote">※最終形は現場条件・監理者協議により決定します。足場設置中は一部駐車区画に影響があります。</div>
-</div>
-    </section>
-<section class="slide " data-title="3つの重点" data-section="全体方針" data-duration="1:20" data-notes="全体の軸を示す。以降はこの3軸で聞いてもらう。">
-      <div class="page-chrome"><div><span>04</span><b>全体方針</b></div><div>施工会社選定ヒアリング</div></div>
-      <div class="slide-inner">
-<div class="action-title wide"><div class="label">THREE PRIORITIES</div><h2>このマンションでは、説明すべきことを3つに絞ります。</h2></div>
-<div class="three-flat">
-  <div><span>01</span><h3>暮らしを止めない</h3><p>128戸の生活動線と工事動線を整理する。</p></div>
-  <div><span>02</span><h3>劣化を見逃さない</h3><p>タイル・軒天等の建物固有劣化を調査で見極める。</p></div>
-  <div><span>03</span><h3>現場を一人に背負わせない</h3><p>現場代理人と会社組織で判断を支える。</p></div>
-</div>
-</div>
-    </section>
-<section class="slide " data-title="128戸の生活動線" data-section="01 暮らしを止めない" data-duration="2:00" data-notes="北側車路と出入口付近は日々の調整対象。">
-      <div class="page-chrome"><div><span>05</span><b>01 暮らしを止めない</b></div><div>施工会社選定ヒアリング</div></div>
-      <div class="slide-inner">
-<div class="two-col visual-dominant">
-  <div class="large-visual plan-crop" style="background-image:url('assets/image-06.webp')"></div>
-  <div class="copy-block slim">
-    <div class="label">LIVING ROUTE</div>
-    <h2>総合仮設計画は、毎日の移動を守る計画です。</h2>
-    <p>駐車場、自転車・バイク、歩行者、エントランス、バルコニーで生活動線と工事動線が干渉します。</p>
-    <div class="tag-list"><span>北側車路</span><span>出入口</span><span>駐車区画</span><span>歩行者誘導</span></div>
-  </div>
-</div>
-</div>
-    </section>
-<section class="slide " data-title="事前案内" data-section="01 暮らしを止めない" data-duration="1:30" data-notes="生活判断に必要な情報を先に届ける。">
-      <div class="page-chrome"><div><span>06</span><b>01 暮らしを止めない</b></div><div>施工会社選定ヒアリング</div></div>
-      <div class="slide-inner">
-<div class="action-title"><div class="label">COMMUNICATION</div><h2>「知らなかった」を減らすほど、工事中の不安は減らせます。</h2></div>
-<div class="timeline-flat">
-  <div><span>2週間前</span><b>2週間工程</b><p>先の予定を把握</p></div>
-  <div><span>毎週</span><b>週間予定</b><p>生活予定と調整</p></div>
-  <div><span>前日・当日</span><b>直前案内</b><p>変更点を共有</p></div>
-  <div><span>随時</span><b>生活情報</b><p>洗濯物・音・臭気・通行制限</p></div>
-  <div><span>個別</span><b>アンケート</b><p>バルコニー等の事情を確認</p></div>
-</div>
-<div class="bottom-message">先に伝える。だから、トラブルを減らせる。</div>
-</div>
-    </section>
-<section class="slide " data-title="調査後に判断" data-section="02 劣化を見逃さない" data-duration="1:40" data-notes="足場後に全面調査→数量化→協議→承認→本施工。">
-      <div class="page-chrome"><div><span>07</span><b>02 劣化を見逃さない</b></div><div>施工会社選定ヒアリング</div></div>
-      <div class="slide-inner">
-<div class="action-title"><div class="label">QUALITY PROCESS</div><h2>工事は、調査してから決めます。</h2><p>現時点で補修範囲を断定せず、足場設置後の全面調査で数量化します。</p></div>
-<div class="process-line">
-  <div><span>01</span><b>仮設・足場</b></div>
-  <div><span>02</span><b>全面調査</b></div>
-  <div><span>03</span><b>写真・図面<br>数量化</b></div>
-  <div><span>04</span><b>監理者・組合<br>協議</b></div>
-  <div><span>05</span><b>承認</b></div>
-  <div><span>06</span><b>本施工・検査</b></div>
-</div>
-</div>
-    </section>
-<section class="slide " data-title="A案/B案" data-section="02 劣化を見逃さない" data-duration="2:30" data-notes="高い方が良い、安い方が悪いではなく、更新範囲・工期・生活影響の比較。">
-      <div class="page-chrome"><div><span>08</span><b>02 劣化を見逃さない</b></div><div>施工会社選定ヒアリング</div></div>
-      <div class="slide-inner">
-<div class="action-title wide"><div class="label">OPTION A / B</div><h2>A案・B案は、価格の上下ではなく更新範囲と工事期間の違いです。</h2></div>
-<div class="option-table">
-  <div class="opt-row head"><div></div><div>A案：既存活用</div><div>B案：更新範囲拡大</div></div>
-  <div class="opt-row"><div>バルコニー</div><div>化学洗浄 1,545㎡＋不良部150㎡</div><div>全面張替え 1,545㎡</div></div>
-  <div class="opt-row"><div>開放廊下</div><div>化学洗浄 1,827㎡＋不良部300㎡</div><div>全面張替え 1,827㎡</div></div>
-  <div class="opt-row"><div>外階段</div><div>不良部を張替え</div><div>踊場121㎡＋段部450段</div></div>
-  <div class="opt-row duration"><div>工期</div><div><b>211日</b><span>2027.2.1–8.31</span></div><div><b>242日</b><span>2027.2.1–9.30</span></div></div>
-</div>
-<div class="bottom-message small">判断の観点：既存活用 / 更新範囲 / 工事期間 / 生活への影響</div>
-</div>
-    </section>
-<section class="slide " data-title="EV外壁タイル" data-section="02 劣化を見逃さない" data-duration="1:40" data-notes="現地確認した事実だけを説明。周辺にも浮きが広がっているため全面打診が必要。">
-      <div class="page-chrome"><div><span>09</span><b>02 劣化を見逃さない</b></div><div>施工会社選定ヒアリング</div></div>
-      <div class="slide-inner">
-<div class="photo-report">
-  <div class="report-copy">
-    <div class="label">OBSERVED ON SITE</div>
-    <h2>EV外壁タイルでは、広範囲の浮きを確認しています。</h2>
-    <p>10〜8階、5〜3階で確認。原因や最終補修範囲は断定せず、足場設置後の全面打診で確認します。</p>
-  </div>
-  <div class="photo-grid-report">
-    <div class="photo-large" style="background-image:url('assets/image-07.png')"><span>EV外壁</span></div>
-    <div style="background-image:url('assets/image-08.png')"><span>10–8階</span></div>
-    <div style="background-image:url('assets/image-09.png')"><span>5–3階</span></div>
-  </div>
-</div>
-</div>
-    </section>
-<section class="slide " data-title="タイル補修判断" data-section="02 劣化を見逃さない" data-duration="2:15" data-notes="全面打診、剥離界面、撤去範囲、目荒らし清掃、試験施工、接着力試験、承認、本施工。">
-      <div class="page-chrome"><div><span>10</span><b>02 劣化を見逃さない</b></div><div>施工会社選定ヒアリング</div></div>
-      <div class="slide-inner">
-<div class="action-title"><div class="label">TILE REPAIR DECISION</div><h2>浮いたところだけを直す判断はしません。</h2><p>剥離界面と試験結果を確認して、補修範囲を決めます。</p></div>
-<div class="five-steps">
-  <div><span>01</span><b>全面打診</b><p>浮き範囲を把握</p></div>
-  <div><span>02</span><b>剥離界面確認</b><p>どこで剥がれているか確認</p></div>
-  <div><span>03</span><b>下地処理</b><p>撤去・目荒らし・清掃</p></div>
-  <div><span>04</span><b>試験施工</b><p>引張接着力試験</p></div>
-  <div><span>05</span><b>承認・本施工</b><p>監理者・組合と協議</p></div>
-</div>
-<div class="bottom-message">写真・数量・試験で説明できる状態にしてから施工へ。</div>
-</div>
-    </section>
-<section class="slide " data-title="上層階軒天" data-section="02 劣化を見逃さない" data-duration="1:45" data-notes="試験施工で肌、骨材、色を確認してから本施工。">
-      <div class="page-chrome"><div><span>11</span><b>02 劣化を見逃さない</b></div><div>施工会社選定ヒアリング</div></div>
-      <div class="slide-inner">
-<div class="two-col photo-right">
-  <div class="copy-block">
-    <div class="label">UPPER FLOOR SOFFIT</div>
-    <h2>部分補修を、繰り返さない。</h2>
-    <p>上層階軒天の塗膜浮き・剥離と既存補修跡を、目地単位で確認します。</p>
-    <div class="compact-flow"><span>目地単位</span><span>脆弱塗膜撤去</span><span>下地処理</span><span>試験施工</span><span>本施工</span></div>
-  </div>
-  <div class="vertical-photos"><div style="background-image:url('assets/image-10.png')"></div><div style="background-image:url('assets/image-11.png')"></div><div style="background-image:url('assets/image-12.png')"></div></div>
-</div>
-</div>
-    </section>
-<section class="slide " data-title="品質管理" data-section="03 現場を一人に背負わせない" data-duration="2:20" data-notes="記録があるから説明できる。">
-      <div class="page-chrome"><div><span>12</span><b>03 現場を一人に背負わせない</b></div><div>施工会社選定ヒアリング</div></div>
-      <div class="slide-inner">
-<div class="action-title"><div class="label">QUALITY CONTROL</div><h2>品質は、職人任せにしません。</h2><p>工程ごとに写真・数量・検査結果を残し、管理組合へ根拠を説明できる状態にします。</p></div>
-<div class="quality-grid">
-  <div><b>下地・タイル</b><p>打診範囲 / 界面 / 接着力</p></div>
-  <div><b>塗装</b><p>素地 / 塗布量 / 乾燥</p></div>
-  <div><b>シーリング</b><p>撤去 / プライマー / 厚み</p></div>
-  <div><b>防水</b><p>下地 / 重ね / 端末</p></div>
-</div>
-<div class="inspect-line"><span>事前確認</span><span>試験施工</span><span>施工中検査</span><span>自主検査</span><span>社内検査</span><span>監理者検査</span><span>是正確認</span></div>
-</div>
-    </section>
-<section class="slide " data-title="安全管理" data-section="03 現場を一人に背負わせない" data-duration="2:00" data-notes="現場内の慣れを外部の目で補う。">
-      <div class="page-chrome"><div><span>13</span><b>03 現場を一人に背負わせない</b></div><div>施工会社選定ヒアリング</div></div>
-      <div class="slide-inner">
-<div class="two-col emphasis-left">
-  <div class="copy-block">
-    <div class="label">SAFETY MANAGEMENT</div>
-    <h2>安全も、現場任せにしません。</h2>
-    <p>居住中工事で優先する重点リスクを、現場の日常管理と安全環境部の巡回で二重管理します。</p>
-  </div>
-  <div class="safety-box">
-    <div class="risk-title">重点リスク</div>
-    <div class="risk-grid"><span>第三者災害</span><span>足場侵入</span><span>火災</span><span>漏水</span><span>設備事故</span></div>
-    <div class="dual"><div><b>現場の日常管理</b><p>朝礼 / 巡視 / 立入管理 / 設備確認</p></div><div><b>安全環境部の巡回</b><p>第三者視点で確認・是正</p></div></div>
-  </div>
-</div>
-</div>
-    </section>
-<section class="slide " data-title="現場代理人予定者" data-section="03 現場を一人に背負わせない" data-duration="1:45" data-notes="顔写真は本番前に正式写真へ。経験35年、代表実績3件を短く。">
-      <div class="page-chrome"><div><span>14</span><b>03 現場を一人に背負わせない</b></div><div>施工会社選定ヒアリング</div></div>
-      <div class="slide-inner">
-<div class="manager-flat">
-  <div class="portrait-flat"><span>PHOTO</span><small>正式写真へ差し替え</small></div>
-  <div class="manager-info">
-    <div class="label">SITE MANAGER</div>
-    <h2>柳生 博之</h2>
-    <p class="role">現場代理人予定者 / 1級建築施工管理技士 / 監理技術者</p>
-    <div class="experience"><b>35</b><span>years<br>experience</span></div>
-    <div class="record-flat"><div><b>33階</b><span>483戸</span></div><div><b>20階</b><span>671戸</span></div><div><b>14階</b><span>550戸</span></div></div>
-  </div>
-</div>
-</div>
-    </section>
-<section class="slide " data-title="会社支援体制" data-section="03 現場を一人に背負わせない" data-duration="2:00" data-notes="代理人不在ではなく、責任者を会社が支える体制。">
-      <div class="page-chrome"><div><span>15</span><b>03 現場を一人に背負わせない</b></div><div>施工会社選定ヒアリング</div></div>
-      <div class="slide-inner">
-<div class="action-title wide"><div class="label">TEAM SUPPORT</div><h2>責任者を立てたうえで、会社組織が孤立させません。</h2></div>
-<div class="team-table">
-  <div class="center-cell"><span>現場代理人</span><b>柳生 博之</b></div>
-  <div><b>安全環境部</b><p>安全指摘・是正</p></div>
-  <div><b>工事チーム</b><p>工程・技術判断</p></div>
-  <div><b>積算チーム</b><p>追加数量・金額整理</p></div>
-  <div><b>営業チーム</b><p>組合・居住者対応</p></div>
-  <div><b>アフターメンテナンス部</b><p>竣工後対応</p></div>
-</div>
-</div>
-    </section>
-<section class="slide " data-title="アフターメンテナンス" data-section="AFTER" data-duration="1:30" data-notes="定期点検は1・3・5・7・10年。">
-      <div class="page-chrome"><div><span>16</span><b>AFTER</b></div><div>施工会社選定ヒアリング</div></div>
-      <div class="slide-inner">
-<div class="action-title"><div class="label">AFTER MAINTENANCE</div><h2>工事が終わっても、管理は終わりません。</h2><p>保証書、定期点検、結果報告、補修完了まで一つの流れで管理します。</p></div>
-<div class="after-line"><span>竣工</span><span>保証書</span><span>点検案内</span><span>居住者アンケート</span><span>共用部点検</span><span>結果報告</span><span>補修</span><span>完了報告</span></div>
-<div class="warranty-flat"><div><b>7年</b><span>外壁塗装</span></div><div><b>10年</b><span>屋上等ウレタン</span></div><div><b>5年</b><span>シーリング</span></div><div><b>5年</b><span>床シート全面更新</span></div><div><b>3年</b><span>鉄部</span></div></div>
-<div class="footnote">※契約時に仕様書・見積要項・保証書を最終整合します。</div>
-</div>
-    </section>
-<section class="slide " data-title="会社基盤" data-section="FOUNDATION" data-duration="1:20" data-notes="1870年創業を、保証を支える基盤として説明。">
-      <div class="page-chrome"><div><span>17</span><b>FOUNDATION</b></div><div>施工会社選定ヒアリング</div></div>
-      <div class="slide-inner">
-<div class="two-col foundation">
-  <div class="copy-block">
-    <div class="label">SINCE 1870</div>
-    <div class="big-year">1870</div>
-    <h2>長期間の工事と保証を支える会社基盤。</h2>
-    <img class="small-logo" src="assets/image-13.png" alt="NAKAMURA">
-  </div>
-  <div class="business-list">
-    <div><span>01</span><b>マンション改修</b><p>居住中工事</p></div>
-    <div><span>02</span><b>建築</b><p>建物をつくる技術</p></div>
-    <div><span>03</span><b>エネルギープラント</b><p>設備と安全</p></div>
-    <div><span>04</span><b>工場生産</b><p>品質を再現する力</p></div>
-  </div>
-</div>
-</div>
-    </section>
-<section class="slide " data-title="最後に3つだけ" data-section="CLOSING" data-duration="1:00" data-notes="冒頭の三つに戻して締める。">
-      <div class="page-chrome"><div><span>18</span><b>CLOSING</b></div><div>施工会社選定ヒアリング</div></div>
-      <div class="slide-inner">
-<div class="closing">
-  <div class="label">IN CLOSING</div>
-  <h2>最後に、3つだけ。</h2>
-  <div class="closing-list"><div><span>01</span><b>暮らしを止めない</b></div><div><span>02</span><b>劣化を見逃さない</b></div><div><span>03</span><b>現場を一人に背負わせない</b></div></div>
-  <p>工事を完成させるだけではなく、<br><strong>安心して過ごせる状態で、皆さまにお返しする。</strong></p>
-</div>
-</div>
-    </section>
-<section class="slide qa" data-title="Q&amp;A" data-section="Q&amp;A" data-duration="0:20" data-notes="未調査事項は断定せず、調査・協議・承認のどの段階で回答できるかを明確に。">
-      <div class="page-chrome"><div><span>19</span><b>Q&amp;A</b></div><div>施工会社選定ヒアリング</div></div>
-      <div class="slide-inner">
-<div class="qa-flat">
-  <div class="label">THANK YOU</div>
-  <h1>QUESTIONS</h1>
-  <p>ご清聴ありがとうございました。<br>ご質問を承ります。</p>
-  <img src="assets/image-14.png" alt="NAKAMURA">
-</div>
-</div>
-    </section><div class="progress"></div><div class="notes"></div></main></div><script>
+<div id="topbar"><div class="top-left"><span class="top-section"></span><span class="top-title"></span></div><div class="top-right"><span class="planned">本編 37:10</span><span class="elapsed">経過 00:00</span></div></div>
+<div id="controls"><button id="prev" aria-label="前のスライド">‹ 前へ</button><span class="counter">01 / 32</span><button id="next" aria-label="次のスライド">次へ ›</button><button id="overviewBtn">一覧</button><button id="notesBtn">メモ</button><button id="fullBtn">全画面</button></div><div class="progress"></div>
+<aside id="notes"><button class="notes-close" aria-label="メモを閉じる">×</button><h3></h3><dl></dl></aside>
+<div id="overview"><div class="overview-head"><h2>スライド一覧</h2><button id="overviewClose">閉じる</button></div><div class="thumb-grid"></div></div>
+<script>
 const slides=[...document.querySelectorAll('.slide')];
-let idx=0; let deckStart=Date.now(); let slideStart=Date.now(); const total=slides.length;
-const $=s=>document.querySelector(s);
-const progress=$('.progress'), notes=$('.notes');
-const nav=$('.deck-nav');
-const statusCount=$('.status-count'), statusTitle=$('.status-title'), statusSection=$('.status-section');
-const slideRemaining=$('.slide-remaining'), totalElapsed=$('.total-elapsed');
-const prevBtn=$('[data-prev]'), nextBtn=$('[data-next]');
-function durSec(s){const parts=(s.dataset.duration||'0:00').split(':').map(Number);return parts[0]*60+(parts[1]||0)}
-const totalDur=slides.reduce((a,s)=>a+durSec(s),0);
-function fmt(sec){sec=Math.max(0,Math.round(sec));return `${Math.floor(sec/60)}:${String(sec%60).padStart(2,'0')}`}
-nav.innerHTML=slides.map((s,i)=>`<button class="nav-item" data-i="${i}" title="${String(i+1).padStart(2,'0')} ${s.dataset.title}"><span class="nav-num">${i+1}</span><span class="nav-label">${s.dataset.title}</span></button>`).join('');
-const navItems=[...nav.querySelectorAll('.nav-item')];
-nav.addEventListener('click',e=>{const b=e.target.closest('.nav-item');if(b)show(+b.dataset.i)});
-function show(i){
-  const next=Math.max(0,Math.min(total-1,i));
-  if(next!==idx || !slides[idx].classList.contains('active')) slideStart=Date.now();
-  idx=next;
-  slides.forEach((s,n)=>s.classList.toggle('active',n===idx));
-  navItems.forEach((b,n)=>{b.classList.toggle('active',n===idx);b.classList.toggle('completed',n<idx)});
-  progress.style.width=`${((idx+1)/total)*100}%`;
-  statusCount.textContent=`${idx+1} / ${total}`;
-  statusTitle.textContent=slides[idx].dataset.title;
-  statusSection.textContent=slides[idx].dataset.section||'';
-  prevBtn.disabled=idx===0; nextBtn.disabled=idx===total-1;
-  updateNotes();
-}
-function updateNotes(){const s=slides[idx];notes.innerHTML=`<h3>${String(idx+1).padStart(2,'0')} ${s.dataset.title}</h3><p>${s.dataset.notes||''}</p><p><b>目安：</b>${s.dataset.duration}</p>`}
-function tick(){
-  const elapsed=(Date.now()-deckStart)/1000;
-  const onSlide=(Date.now()-slideStart)/1000;
-  slideRemaining.textContent=fmt(durSec(slides[idx])-onSlide);
-  totalElapsed.textContent=`${fmt(elapsed)} / ${fmt(totalDur)}`;
-  requestAnimationFrame(tick)
-}
-function overview(){
-  let ov=document.querySelector('.overview');
-  if(!ov){
-    ov=document.createElement('div');ov.className='overview';
-    ov.innerHTML='<div class="thumb-grid">'+slides.map((s,i)=>`<div class="thumb" data-i="${i}"><b>${String(i+1).padStart(2,'0')}</b><span>${s.dataset.title}</span></div>`).join('')+'</div>';
-    document.body.appendChild(ov);
-    ov.addEventListener('click',e=>{const t=e.target.closest('.thumb');if(t){show(+t.dataset.i);ov.classList.remove('open')}else if(e.target===ov){ov.classList.remove('open')}})
-  }
-  ov.classList.toggle('open')
-}
-function toggleFull(){document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen()}
-document.addEventListener('keydown',e=>{
-  if(['ArrowRight','PageDown',' '].includes(e.key)){show(idx+1);e.preventDefault()}
-  if(['ArrowLeft','PageUp'].includes(e.key)){show(idx-1);e.preventDefault()}
-  if(e.key.toLowerCase()==='o')overview();
-  if(e.key.toLowerCase()==='n')notes.classList.toggle('open');
-  if(e.key.toLowerCase()==='f')toggleFull();
-});
-prevBtn.onclick=()=>show(idx-1);
-nextBtn.onclick=()=>show(idx+1);
-$('[data-overview]').onclick=overview;
-$('[data-notes]').onclick=()=>notes.classList.toggle('open');
-$('[data-full]').onclick=toggleFull;
-function resize(){const deck=$('#deck');const scale=Math.min(innerWidth/1600,innerHeight/900);deck.style.transform=`scale(${scale})`}
-addEventListener('resize',resize);resize();show(0);tick();
-</script></body></html>
+const notes=[
+{talk:'表紙。会社説明へ急がず、今日の目的を共有する。',opening:'今日は、NAKAMURAという会社の説明ではなく、このマンションをどう施工するかをご説明します。',points:'施工計画・品質・安全・居住者対応を時間軸で追体験してもらう。',numbers:'40分枠／本編37分10秒',assert:'このプレゼンは本物件の施工計画を中心に構成している。',caution:'契約条件や最終仕様が確定したとは言わない。',next:'まず、現地を見て最初に気になったことへ。'},
+{talk:'冒頭の問題提起。外観と生活の同時進行を示す。',opening:'この工事で、私たちが最初に気になったことがあります。',points:'規模、動線、北側車路、目視できている劣化をひとつの視点で見る。',numbers:'14階／128戸／127台／2.7m',assert:'資料上の現地条件を重点管理課題として扱う。',caution:'目視情報だけで補修数量を断定しない。',next:'建物の数字を、暮らしの密度として見ます。'},
+{talk:'物件の数字を短く強く読む。',opening:'この建物では、工事だけが動くわけではありません。',points:'駐車・駐輪・歩行者の動線が同時に動く。',numbers:'機械式116台／平置11台／自転車254台／バイク14台',assert:'工程と仮設計画は生活動線とセットで考える。',caution:'すべての移動や影響がゼロになるとは言わない。',next:'だから、最初に3つの約束を置きます。'},
+{talk:'3つの約束をプレゼン全体の評価軸として提示する。',opening:'この3つを、これから具体策で証明します。',points:'暮らし・劣化・体制をキャッチコピーではなくプロセスとして説明する。',numbers:'3つの約束',assert:'以降の各ページは3つの約束のどれかに接続する。',caution:'工事中の不便が一切なくなるとは言わない。',next:'最初の約束は、着工前の準備から始まります。'},
+{talk:'DAY 0の章扉。時間軸を切り替える。',opening:'まず、着工する前の日から始めます。',points:'会社概要ではなく、準備の話へ入る。',numbers:'DAY 0',assert:'着工前の確認を重視する。',caution:'着工前に全リスクを消せるとは言わない。',next:'工事の成否を左右する準備を見ます。'},
+{talk:'キックオフと施工計画の準備を説明する。',opening:'着工する前に、工事の成否はかなり決まります。',points:'書類・仮設・楊重・安全・説明会・工程を同じ準備会議で見る。',numbers:'8項目のキックオフチェックリスト',assert:'現場ルール仕様書に基づく準備項目を運用する。',caution:'このページだけで最終計画が確定したとは言わない。',next:'準備で見るのは、建物だけではありません。'},
+{talk:'総合仮設計画図を大きく見せ、生活を図面化する考えを説明する。',opening:'現場に入る前に、生活を図面化します。',points:'歩行者・車両・自転車バイク・工事動線、仮設事務所・資材・産廃・植栽置場を分けて読む。',numbers:'北側車路約2.7m／駐車移動対象5台の記載',assert:'計画図の情報を元資料どおりに扱う。',caution:'図面の位置は最終確定ではなく、組合様協議の上で決定。',next:'次は、現場が実際に動き出すDAY 1です。'},
+{talk:'DAY 1の章扉。仮設計画の主役感を出す。',opening:'足場が立つ日、現場のルールが見えます。',points:'仮設は単なる準備ではなく生活との接点。',numbers:'DAY 1',assert:'仮設を工程の中心テーマとして扱う。',caution:'施工例写真を本物件の確定施工と誤認させない。',next:'総合仮設計画を、生活側から読みます。'},
+{talk:'総合仮設計画の要素を、写真と図面で説明する。',opening:'足場の外側だけでなく、内側の生活を見ます。',points:'車両、自転車、植栽、キッズルーム、搬入、防犯を計画に入れる。',numbers:'生活動線／工事動線／防犯動線',assert:'仮設計画図に記載された配置を説明できる。',caution:'追加の仮置場や移動方法を資料外で決めない。',next:'この計画で最も重要な数字が、北側の2.7mです。'},
+{talk:'北側車路の具体的な課題を巨大な数字で印象づける。',opening:'通常の足場では、車路有効幅は約2.7mです。',points:'梁枠開口足場での出入困難、足場組立解体時の一時移動。',numbers:'約2.7m',assert:'総合仮設計画図に書かれた条件を示す。',caution:'どの車両でも通行不能になると一般化しない。',next:'だから、足場の掛け方から考えます。'},
+{talk:'通常案と提案の考え方を比較し、万能案ではないと明示する。',opening:'だから、足場の掛け方から考えます。',points:'ベランダキャッチャー等で足場を浮かせ、車路確保を狙う計画。',numbers:'約2.7m／ベランダキャッチャー等',assert:'資料にある提案の方向性を説明する。',caution:'採用確定・安全条件無条件成立とは言わない。',next:'提案を現地条件で検証します。'},
+{talk:'提案の最終決定条件を明示する。',opening:'足場は、寸法・支持条件・使用車両を確認して決めます。',points:'足場専門業者・監理者との協議。',numbers:'3つの確認軸',assert:'合理的な提案であり、協議後に確定する。',caution:'万能な提案ではない。',next:'足場が立ったら、調査の段階へ進みます。'},
+{talk:'WEEK 1–4の章扉。調査の考え方へ転換する。',opening:'次は、すぐに直さず、まず調べる時間です。',points:'近接できて初めて分かる状態を扱う。',numbers:'WEEK 1–4',assert:'調査・数量化を本施工の前提にする。',caution:'工程週の実際の日付をこの章扉で断定しない。',next:'調査から数量化への流れを見ます。'},
+{talk:'調査から数量化・承認へ進むプロセスを説明する。',opening:'すぐに直すのではなく、まず調べます。',points:'足場設置、全面打診、マーキング、写真、図面、数量、協議承認。',numbers:'調査→数量化→協議→承認→本施工',assert:'足場設置後に全容を確認する。',caution:'見積数量を実数と同一視しない。',next:'調査と同じくらい、情報の届け方が重要です。'},
+{talk:'居住者対応を、情報不足を減らす仕組みとして説明する。',opening:'情報不足が、不満をつくります。',points:'2週間工程、週間予定、当日翌日、洗濯物、騒音、臭気、通行、アンケート、個別事情。',numbers:'2週間工程／当日・翌日予定',assert:'苦情対応フローを傾聴から再発防止まで運用する。',caution:'苦情が発生しないとは言わない。',next:'調査結果を、次の判断へ接続します。'},
+{talk:'DECISION GATEの章扉。止まる場所を印象づける。',opening:'ここで一度止まり、報告し、確認・承認を得てから次へ進みます。',points:'施工会社だけで進めない。',numbers:'5つのGate',assert:'工程表の確認タイミングを意思決定点として扱う。',caution:'承認者や手続の詳細は契約・監理条件に従う。',next:'5つのGateを順番に見ます。'},
+{talk:'Gate 01〜05を、安心のための停止点として説明する。',opening:'契約後、施工会社が勝手に進めていく工事ではありません。',points:'全面調査、数量・追加増減、試験施工、足場解体前検査、竣工確認。',numbers:'GATE 01〜05',assert:'報告・協議・承認後に次工程へ進む考え方。',caution:'すべての判断がその場で即決されるとは言わない。',next:'A案・B案も、止まる場所を持つ地図です。'},
+{talk:'A/B工程表の差異を、期間と確認時期で説明する。',opening:'A案・B案は、工程表ではなく意思決定の地図として見ます。',points:'仮設から竣工まで、タイル数量確認・実数精算・足場解体前検査・追加増減清算・竣工検査。',numbers:'A案211日/実働140日/8月31日、B案242日/実働160日/9月30日',assert:'資料記載のA/B期間と確認項目を示す。',caution:'A/Bの採否や金額をこの場で決めない。',next:'そして、足場に上がって初めて分かる現実へ。'},
+{talk:'技術パートの章扉。調査後の判断へ切り替える。',opening:'ここから、建物が教えてくれる状態を扱います。',points:'EVタイルと軒天の2つの山場。',numbers:'THE MOMENT OF TRUTH',assert:'足場設置後調査の必要性を強調する。',caution:'現状写真から最終原因を断定しない。',next:'まずEV外壁タイルです。'},
+{talk:'EVタイルの現状と断定しない理由を説明する。',opening:'私たちは、今この場で補修数量を断定しません。',points:'10〜8階・5〜3階の広範囲浮き、周囲の浮き、下地の状態。',numbers:'10〜8階／5〜3階',assert:'足場設置後に全面調査が必要。',caution:'全範囲が同じ原因・同じ補修になるとは言わない。',next:'調べた後の施工判断を9段階で示します。'},
+{talk:'EVタイルの9段階を読み上げ、試験と承認を山場にする。',opening:'調べて、試して、承認を得てから本施工に入ります。',points:'全面打診、剥離界面、撤去範囲、目荒らし、清掃、試験施工、引張接着力試験、監理者確認、本施工。',numbers:'9段階／引張接着力試験',assert:'提案書に沿った施工判断の流れ。',caution:'採用工法・数量・試験基準の詳細は仕様書・監理者確認に従う。',next:'もう一つの重点は、上層階軒天です。'},
+{talk:'軒天の現状を写真で示し、局部補修ではない考えを説明する。',opening:'浮いているところだけ直して終わりではありません。',points:'塗膜浮き・剥離、過去補修部、型枠継目・段差。',numbers:'資料では13〜10階の目視情報と14〜10階の提案書記載がある',assert:'足場設置後に軒天状態を確定する。',caution:'階数の資料記載差異を統合して断定しない。',next:'下地・意匠・再発を一つのプロセスで扱います。'},
+{talk:'軒天の補修プロセスを、試験施工と承認まで見せる。',opening:'再発防止と、既存意匠への調和を両立します。',points:'脆弱塗膜、過去補修部、下地確認、左官、リシン、骨材・肌・色、承認。',numbers:'骨材／肌／色',assert:'目地単位で整理し、試験施工後に本施工へ進む。',caution:'使用材料や色が最終承認済みとは言わない。',next:'技術判断を、現場の品質管理へ接続します。'},
+{talk:'CONSTRUCTION章扉。品質と安全を抽象語で終わらせない。',opening:'完成後に見えなくなる工程ほど、記録を残します。',points:'記録・説明・合意形成のつながり。',numbers:'QUALITY & SAFETY',assert:'品質と安全を具体的チェック項目で説明する。',caution:'品質が高いという抽象評価で終わらせない。',next:'品質は記録で説明します。'},
+{talk:'品質管理資料から、今回説明すべき記録を抽出する。',opening:'完成後に見えなくなる工程ほど、記録を残します。',points:'調査図、数量、写真、試験、温湿度、希釈、膜厚、充填、端末、検査、是正。',numbers:'4つの記録群',assert:'記録→説明→合意形成の流れ。',caution:'記録項目がすべて同じ頻度で実施されるとは言わない。',next:'品質を守るもう一つの軸が安全です。'},
+{talk:'リスクと対策の対応関係を説明し、安全環境部の役割を強調する。',opening:'「安全第一」というスローガンだけでは管理できません。',points:'第三者災害、侵入、火災、溶剤、漏水、設備、工事車両、搬入。',numbers:'安全環境部巡回／是正／再確認',assert:'外部の目でリスクを補う体制。',caution:'事故ゼロを保証する表現は避ける。',next:'ここまで考えた計画を、誰が実行するのか。'},
+{talk:'TEAM章扉。個人と組織の役割へ切り替える。',opening:'ここまで考えた施工計画を、誰が実行するのか。',points:'現場代理人の紹介へ。',numbers:'TEAM',assert:'個人の経験と会社支援を分けて説明する。',caution:'写真と経歴の一致を未確認のまま断定しない。',next:'まず、現場代理人予定者です。'},
+{talk:'現場代理人の顔・経験・資格・実績を短く紹介する。',opening:'現場の責任者を、数字と経歴でご紹介します。',points:'柳生博之、工事部長、経験35年、資格、代表実績。',numbers:'35年／1級建築施工管理技士／監理技術者資格者証',assert:'経歴書記載の情報。',caution:'本工事の正式配置・写真との同一人物確認は要確認。',next:'ただし、その人一人には背負わせません。'},
+{talk:'現場代理人中心のバックアップ関係を説明する。',opening:'ただし、その人一人には背負わせません。',points:'安全環境部、工事、積算、営業、アフターの支援。',numbers:'5部門の支援イメージ',assert:'組織図記載の部門を役割で再構成している。',caution:'実際の担当者名・連絡系統は契約前に確認。',next:'会社が支えるなら、追加変更も見える形にします。'},
+{talk:'追加変更工事を、調査と承認のプロセスで透明化する。',opening:'追加工事を、ブラックボックスにしません。',points:'調査、数量化、写真図面、金額、報告、協議、承認、施工。',numbers:'8ステップ',assert:'仕様書・質疑回答の表現を優先して扱う。',caution:'追加工事が必ず発生するとは言わない。',next:'最後に、足場解体後と会社の基盤を見ます。'},
+{talk:'アフターと会社基盤を同じ画面でつなぐ。',opening:'足場を解体した後も、点検して終わりにはしません。',points:'保証書、点検案内、アンケート、共用部点検、結果報告、補修、完了確認、報告書。会社紹介は長期支援の根拠として置く。',numbers:'1870年創業／4事業本部',assert:'アフター点検の流れ、会社PRの事実を説明する。',caution:'保証年数は工種別で異なり、見積要項書・工事仕様書との整合確認が必要。',next:'冒頭の3つの約束へ戻ります。'},
+{talk:'冒頭の3つの約束に戻り、質疑へつなぐ。',opening:'この3つを、本日40分かけて具体的にご説明してきました。',points:'暮らし・劣化・体制。選定後の施工を預けられる会社という印象で締める。',numbers:'3つの約束／本編37分10秒＋2分50秒バッファ',assert:'本編を時間軸で説明し切った。',caution:'未確定事項をこの場で確定したと扱わない。',next:'ここから質疑・確認事項へ。'}
+];
+let idx=0, started=Date.now(), elapsedOffset=0;
+const $=s=>document.querySelector(s);const topbar=$('#topbar'),topSection=$('.top-section'),topTitle=$('.top-title'),planned=$('.planned'),elapsed=$('.elapsed'),counter=$('.counter'),progress=$('.progress'),notesPanel=$('#notes'),overview=$('#overview'),controls=$('#controls');
+function parseTime(s){const [m,sec]=s.split(':').map(Number);return m*60+sec}const totalSec=notes.reduce((a,n)=>a+parseTime(n.duration),0);
+function fmt(sec){sec=Math.max(0,Math.floor(sec));return String(Math.floor(sec/60)).padStart(2,'0')+':'+String(sec%60).padStart(2,'0')}
+function show(i){idx=Math.max(0,Math.min(slides.length-1,i));slides.forEach((s,j)=>s.classList.toggle('active',j===idx));const s=slides[idx],n=notes[idx];topSection.textContent=s.dataset.section;topTitle.textContent=s.dataset.title;counter.textContent=String(idx+1).padStart(2,'0')+' / '+String(slides.length).padStart(2,'0');progress.style.width=((idx+1)/slides.length*100)+'%';$('#prev').disabled=idx===0;$('#next').disabled=idx===slides.length-1;const dark=s.classList.contains('chapter')||s.classList.contains('hero-cover')||s.classList.contains('closing');topbar.classList.toggle('topbar-dark',dark);controls.classList.toggle('nav-dark',dark);updateNotes();history.replaceState(null,'','#'+s.dataset.id)}
+function updateNotes(){const s=slides[idx],n=notes[idx];notesPanel.querySelector('h3').textContent=String(idx+1).padStart(2,'0')+' / '+s.dataset.title;const rows=[['話すこと',n.talk],['最初の一言',n.opening],['説明ポイント',n.points],['強調する数字',n.numbers],['言い切ってよい',n.assert],['断定しない',n.caution],['次ページへ',n.next],['想定時間',n.duration]];notesPanel.querySelector('dl').innerHTML=rows.map(r=>'<dt>'+r[0]+'</dt><dd>'+r[1]+'</dd>').join('')}
+function buildOverview(){const grid=document.querySelector('.thumb-grid');grid.innerHTML=slides.map((s,i)=>'<div class="thumb '+(s.classList.contains('chapter')?'chapter-thumb':'')+'" data-goto="'+i+'"><div class="tno">'+String(i+1).padStart(2,'0')+' / '+s.dataset.section+'</div><b>'+s.dataset.title+'</b><span>'+s.dataset.duration+'</span></div>').join('');grid.querySelectorAll('[data-goto]').forEach(x=>x.onclick=()=>{show(Number(x.dataset.goto));overview.classList.remove('overview-open')})}
+$('#prev').onclick=()=>show(idx-1);$('#next').onclick=()=>show(idx+1);$('#notesBtn').onclick=()=>notesPanel.classList.toggle('open');$('.notes-close').onclick=()=>notesPanel.classList.remove('open');$('#overviewBtn').onclick=()=>overview.classList.add('overview-open');$('#overviewClose').onclick=()=>overview.classList.remove('overview-open');$('#fullBtn').onclick=()=>document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen();
+document.addEventListener('keydown',e=>{if(['ArrowRight','PageDown',' '].includes(e.key)){show(idx+1);e.preventDefault()}else if(['ArrowLeft','PageUp'].includes(e.key)){show(idx-1);e.preventDefault()}else if(e.key==='Home'){show(0)}else if(e.key==='End'){show(slides.length-1)}else if(e.key.toLowerCase()==='n'){notesPanel.classList.toggle('open')}else if(e.key.toLowerCase()==='o'){overview.classList.add('overview-open')}else if(e.key.toLowerCase()==='f'){$('#fullBtn').click()}});
+function updateClock(){elapsed.textContent='経過 '+fmt((Date.now()-started)/1000);planned.textContent='本編 '+fmt(totalSec)}setInterval(updateClock,500);buildOverview();let initial=Math.max(0,slides.findIndex(s=>s.dataset.id===location.hash.slice(1)));show(initial);updateClock();
+</script>
+</body>
+</html>
